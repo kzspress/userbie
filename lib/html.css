@@ -15,3 +15,7 @@ body {
         -moz-border-radius: 2.5px;
         margin: 0.5em 2em;
 }
+
+.feedback-link-container {
+        display: none;
+}
