@@ -403,13 +403,13 @@ build_html() {
     # Copy css file to html directory
     cp $HTMLCSS $HTMLDIR
 
-    # Run xmlto in $HTMLDIR to generate the html
+    # Run xsltproc in $HTMLDIR to generate the html
     echo "Converting xml to html ..."
-    ( cd $HTMLDIR ; xmlto html *.xml --skip-validation -m ../../$HTMLXSL ) \
-         || ( echor  Error generating the html $HTMLDIR && exit 1 )
+    ( cd $HTMLDIR ; xsltproc -o "$filename.html" "../../$HTMLXSL" "$filename.xml" ) \
+         || ( echor  Error generating the html file "$filename.html" ; exit 1 )
 
     # don't need the xml anymore in the $HTMLDIR
-    rm -f $HTMLDIR/*.xml
+    rm -f "$filename.xml" 
 
     return 0
 }
@@ -473,6 +473,7 @@ case "$command" in
 	clean
 	;;
   pdf)
+	[ -x "$(which fop)" ] || (echor "fop not installed." && exit 1)
 	clean
 	check_book
 	echo "Building '$book' book."
@@ -482,7 +483,7 @@ case "$command" in
 	echo "Done generating pdf $OUTPUTDIR/book.pdf -> $pdffile" 
 	;;
   html)
-	[ -x "$(which xmlto)" ] || ( echor "xmlto not installed." && exit 1 )
+	[ -x "$(which xsltproc)" ] || (echor "xsltproc not installed." && exit 1)
 	clean 
 	check_book
 	echo "Building '$book' book."
