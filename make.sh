@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 ### module info ###
 # The build environment expects to live in a subdir build/
@@ -67,6 +67,7 @@ help() {
 	echo "Available books:" $superbooks
 	echo "      minibooks:" $minibooks
 	echo
+	return 0
 	}
 
 set_xsl() {
@@ -74,6 +75,7 @@ set_xsl() {
 		then	XSLFILE="$BOOKSDIR/$book/lt.xsl"
 		else	XSLFILE="$LIBDIR/lt.xsl"
 	fi
+	return 0
 }
 
 set_JAVA() {
@@ -84,16 +86,17 @@ set_JAVA() {
 	else    echor Could not set JAVA_HOME, something unexpected happened in $0
 		exit 1
 	fi
+	return 0
 	}
 
 check_ROOTDIR() {
 
 	if	[ -d $BOOKSDIR -a -d $MODULESDIR -a -d $BUILDDIR ]
-	then	echor "Current dir is book project root directory."
+	then	echo "Current dir is book project root directory."
 	else	echor "Please run this script from the book root directory."
-		return 1
+		exit 1
 	fi
-
+	return 0
         }
 
 add_mod() {
@@ -113,14 +116,17 @@ add_mod() {
                 MINIBOOKS=${MINIBOOKS}" "$name
                 ;;
         esac
+	return 0
         }
 
 echor() {	# echo error
 	echo $* >&2
+	return 0
 	}
 
 echod() {	# echo debug
 	[ $OPTDEBUG -ge 2 ] && echo $* 
+	return 0
 	}
 
 clean() {
@@ -133,6 +139,7 @@ clean() {
 	[ -h $OUTPUTDIR/book.pdf ] && rm -rf $V $OUTPUTDIR/book.pdf
 	# Clean $HTMLDIR
 	[ -d $HTMLDIR ] && rm -rf $V $HTMLDIR/*.xml
+	return 0
 	}
 
 check_book() {
@@ -147,12 +154,13 @@ check_book() {
 			done
 			if [ $check = 1 ]
 				then echo "Selected book $book"
-				else echo "$book is not available"; exit
+				else echor "$book is not available"; exit -1
 			fi
 		else
 			echo "No book specified, assuming default book"
 			book="default"
 		fi
+	return 0
 	}
 
 build_header() {
@@ -175,6 +183,7 @@ build_header() {
 		"$TEACHER"			                            		>> $headerfile	 
         echo "</bookinfo>"                                      >> $headerfile
 	cat "$HEADERDIR/preface.xml"				>> $headerfile
+	return 0
 	}
 
 build_footer() {
@@ -194,8 +203,7 @@ build_part_body() {
             # enumerate module files for this module $mod
 	    if [ -d "$MODULESDIR/$mod" ]
 	    then	MODULES=$(ls ${MODULESDIR}/${mod}/*)
- 	    else	echo "Error: module $mod does not exist!" 
-			echor "Fatal error occurred!"
+ 	    else	echor "Error: module $mod does not exist!" 
 			exit 1
 	    fi
             echo $MODULES
@@ -232,7 +240,7 @@ build_part_body() {
 
         done
     done
-
+    return 0
 }
 
 fill_part() {
@@ -241,7 +249,7 @@ fill_part() {
 	echo "<title>$BOOKTITLE</title>"        >>$bodyfile
 	cat $1              			>>$bodyfile
 	echo "</part>"      			>>$bodyfile
-
+	return 0
 }
 
 build_part() {
@@ -270,6 +278,7 @@ build_part() {
             # then build that part body
             build_part_body
     fi
+    return 0
     }
 
 build_body() {
@@ -311,6 +320,7 @@ build_body() {
 			fill_part $partfile
 	    fi
     fi
+    return 0
     }
 
 build_xml() {
@@ -354,6 +364,7 @@ build_xml() {
 	cat $headerfile  > $xmlfile
 	cat $bodyfile   >> $xmlfile
 	cat $footerfile >> $xmlfile
+	return 0
 	}
 
 build_pdf() {
@@ -362,18 +373,19 @@ build_pdf() {
 	echo 
 	echo "---------------------------------"
 	echo "Generating $pdffile"
-	eval $(echo fop -xml $xmlfile -xsl $XSLFILE -pdf $pdffile $EXECDEBUG) >&2
+	fop -xml $xmlfile -xsl $XSLFILE -pdf $pdffile $EXECDEBUG
 	ln -s $V $filename.pdf $OUTPUTDIR/book.pdf
 	echo "---------------------------------"
+	return 0
 	}
 
 build_html() {
     [ -d $HTMLDIR ] && rm -rf $V $HTMLDIR
-    mkdir $V $HTMLDIR || ( echor Error creating $HTMLDIR; exit 1 )
-    mkdir $V $HTMLIMGDIR || ( echor Error creating $HTMLIMGDIR; exit 1 )
+    mkdir $V $HTMLDIR || ( echor Error creating $HTMLDIR && exit 1 )
+    mkdir $V $HTMLIMGDIR || ( echor Error creating $HTMLIMGDIR && exit 1 )
 
     # We only need the one xml file
-    cp $V $xmlfile $HTMLDIR || ( echor error copying $xmlfile ; exit 1 )
+    cp $V $xmlfile $HTMLDIR || ( echor error copying $xmlfile && exit 1 )
 
     # Locate the used images in the xml file
     images=`grep imagedata $HTMLDIR/*.xml | cut -d/ -f2 | cut -d\" -f1`
@@ -387,13 +399,16 @@ build_html() {
 
     # Copy css file to html directory
     cp $HTMLCSS $HTMLDIR
+
     # Run xmlto in $HTMLDIR to generate the html
     echo "Converting xml to html ..."
-    ( cd $HTMLDIR && xmlto html *.xml --skip-validation -m ../../$HTMLXSL 2>&1 | grep -v "Writing" ) || ( echor  Error generating the html $HTMLDIR ; exit 1 )
+    ( cd $HTMLDIR ; xmlto html *.xml --skip-validation -m ../../$HTMLXSL ) \
+         || ( echor  Error generating the html $HTMLDIR && exit 1 )
 
     # don't need the xml anymore in the $HTMLDIR
-    rm $HTMLDIR/*.xml
+    rm -f $HTMLDIR/*.xml
 
+    return 0
 }
 
 while getopts "d: h" option
@@ -428,7 +443,7 @@ case $OPTDEBUG in
 		;;
 	4)	# DEBUG 4 is all output we get normally + fop exec debug on + verbose flag everywhere
 		REDIR=""
-		EXECDEBUG="--execdebug"
+		EXECDEBUG="-d"
 		V="-v"
 		;;
 	*)	help
@@ -438,10 +453,10 @@ esac
 
 ##############
 
-check_ROOTDIR || exit 1
+check_ROOTDIR
 
 books=$( cd $BOOKSDIR ; find * -maxdepth 1 -type d)
-superbooks=$( cd $BOOKSDIR ; find * -maxdepth 1 -type d | grep -v minibook )
+superbooks=$( cd $BOOKSDIR ; find * -maxdepth 1 -type d | grep -v minibook ) || true
 minibooks=$( cd $BOOKSDIR ; find * -maxdepth 1 -type d | grep minibook)
 
 mkdir -p $OUTPUTDIR
@@ -464,7 +479,7 @@ case "$command" in
 	echo "Done generating pdf $OUTPUTDIR/book.pdf -> $pdffile" 
 	;;
   html)
-	[ -x "$(which xmlto)" ] || echor "xmlto not installed." || exit 1
+	[ -x "$(which xmlto)" ] || ( echor "xmlto not installed." && exit 1 )
 	clean 
 	check_book
 	echo "Building '$book' book."
