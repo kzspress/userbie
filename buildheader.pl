@@ -5,6 +5,7 @@
 my $abstractfile = shift @ARGV;
 my $copyrightsfile = shift @ARGV;
 my $authorsfile = shift @ARGV;
+my $editorsfile = shift @ARGV;
 my $contributorsfile = shift @ARGV;
 my $reviewersfile = shift @ARGV;
 my $pubdate = shift @ARGV;
@@ -41,6 +42,23 @@ while(<AUTH>){
 	};
 }
 close AUTH;
+
+if (open EDIT,"<$editorsfile") {
+	while(<EDIT>){
+	    chomp;
+		next if /^#/;
+		@EDITOR=split /,/;
+		next unless scalar(@EDITOR)==5;
+		push @EDITORS,{
+			firstname=>$EDITOR[0],
+			lastname=>$EDITOR[1],
+			email=>$EDITOR[2],
+			emailcomment=>$EDITOR[3],
+			http=>$EDITOR[4]
+		};
+	}
+	close EDIT;
+}
 
 open CONTR,"<$contributorsfile" or die "Can't open authors $contributorsfile";
 while(<CONTR>){
@@ -87,6 +105,12 @@ else {
 		print "</author>\n";
 	}
 }
+foreach $editor (@EDITORS) {
+	print "<editor>\n";
+	print "<firstname>$editor->{firstname}</firstname>\n";
+	print "<surname>$editor->{lastname}</surname>\n";
+	print "</editor>\n";
+}
 print "</authorgroup>\n";
 
 # Start output header content.
@@ -105,6 +129,19 @@ while(<ABSTR>) {
 		}
 		$contacts .= "</itemizedlist>\n";
 		s/AUTHORSCONTACT/$contacts/;
+		
+	}
+	if(/EDITORSCONTACT/) {
+		$contacts = "<itemizedlist>\n";
+		foreach $editor (@EDITORS) {
+			$contacts .= "<listitem><para>$editor->{firstname} $editor->{lastname}: ";
+			$contacts .= "$editor->{email}$editor->{emailcomment}";
+			$contacts .= ", ";
+			$contacts .= "$editor->{http}";
+			$contacts .= "</para></listitem>\n";
+		}
+		$contacts .= "</itemizedlist>\n";
+		s/EDITORSCONTACT/$contacts/;
 		
 	}
 

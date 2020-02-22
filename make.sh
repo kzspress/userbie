@@ -176,6 +176,7 @@ build_header() {
 		"$abstractFile" \
 		"$BOOKSDIR/$book/copyrights" \
 		"$BOOKSDIR/$book/authors" \
+		"$BOOKSDIR/$book/editors" \
 		"$BOOKSDIR/$book/contributors" \
 		"$BOOKSDIR/$book/reviewers" \
 		"$PUBDATE" \
