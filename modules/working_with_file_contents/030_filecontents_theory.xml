@@ -68,9 +68,23 @@ paul@debian7~$</screen>
 domain linux-training.be
 search linux-training.be
 nameserver 192.168.1.42</screen>
+	<section><title>copy files</title>
+		<para>The <command>cat</command> command can be used to copy files. We will explain in detail what happens here in the bash shell chapter.</para>
+		<screen>paul@debian8:~$ <command>cat winter.txt</command>
+It is very cold today!
+paul@debian8:~$ <command>cat winter.txt &#062; cold.txt</command>
+paul@debian8:~$ <command>cat cold.txt</command> 
+It is very cold today!
+paul@debian8:~$</screen>		
+	</section>
 	<section><title>concatenate</title>
-		<para><command>cat</command> is short for <command>concatenate</command>. One of the basic uses of <command>cat</command> is to concatenate files into a bigger (or complete) file.</para>
-		<screen>paul@debian8:~$ <command>echo one &#062;part1</command>
+
+	<para><command>cat</command> is short for
+	<command>concatenate</command>. One of the basic uses of
+	<command>cat</command> is to concatenate files into a bigger (or
+	complete) file.</para>
+
+	<screen>paul@debian8:~$ <command>echo one &#062;part1</command>
 paul@debian8:~$ <command>echo two &#062;part2</command>
 paul@debian8:~$ <command>echo three &#062;part3</command>
 paul@debian8:~$ <command>cat part1</command>
@@ -110,15 +124,6 @@ paul@debian8:~$ <command>cat hot.txt</command>
 It is hot today!
 Yes it is summer.
 paul@debian8:~$</screen>
-	</section>
-	<section><title>copy files</title>
-		<para>In the third example you will see that cat can be used to copy files. We will explain in detail what happens here in the bash shell chapter.</para>
-		<screen>paul@debian8:~$ <command>cat winter.txt</command>
-It is very cold today!
-paul@debian8:~$ <command>cat winter.txt &#062; cold.txt</command>
-paul@debian8:~$ <command>cat cold.txt</command> 
-It is very cold today!
-paul@debian8:~$</screen>		
 	</section>
 </section>
 <section><title>tac</title>
