@@ -61,7 +61,7 @@ help() {
 	echo
 	echo "Commands"
 	echo "  clean			clean output dir"
-	echo "  build [BOOK]		build book"
+	echo "  pdf [BOOK]		generate pdf"
 	echo "  html [BOOK]		generate html"
 	echo
 	echo "Available books:" $superbooks
@@ -71,9 +71,9 @@ help() {
 	}
 
 set_xsl() {
-	if	[ -r $BOOKSDIR/$book/lt.xsl ]
-		then	XSLFILE="$BOOKSDIR/$book/lt.xsl"
-		else	XSLFILE="$LIBDIR/lt.xsl"
+	if	[ -r $BOOKSDIR/$book/pdf.xsl ]
+		then	XSLFILE="$BOOKSDIR/$book/pdf.xsl"
+		else	XSLFILE="$LIBDIR/pdf.xsl"
 	fi
 	return 0
 }
@@ -471,7 +471,7 @@ case "$command" in
   clean)
 	clean
 	;;
-  build)
+  pdf)
 	clean
 	check_book
 	echo "Building '$book' book."
