@@ -1,0 +1,197 @@
+<revhistory>
+
+<revision>
+  <revnumber>v3.0.0-alpha</revnumber>
+  <date>22 Feb 2020</date>
+  <authorinitials>Aleksander Korzynski</authorinitials>
+  <revremark>
+
+  Summary of changes:
+
+  <orderedlist>
+    <listitem>Move aside all books except for <citetitle>Linux
+    Fundamentals</citetitle>;</listitem>
+
+    <listitem>Change the title of the book to <citetitle>Linux Doesn't Have
+    to Be Hard: A Beginner's Guide</citetitle> and the title of the series
+    to <citetitle>Userbie</citetitle>;</listitem>
+
+    <listitem>Move aside all minibooks except for <citetitle>First Steps on
+    the Command Line</citetitle>;</listitem>
+
+    <listitem>Change the title of the minibook to <citetitle>Commence the
+    Commands: A Quick-Start Guide to the Linux Shell</citetitle>;</listitem>
+
+    <listitem>Reword the explanation of the <emphasis>cat</emphasis>
+    command;</listitem>
+
+    <listitem>Modify the examples to refrain from using the
+    <emphasis>cat</emphasis> command, before its usage is explained to the
+    reader;</listitem>
+
+    <listitem>Modify the examples to refrain from using a
+    <emphasis>semicolon</emphasis> &#8211; '<emphasis>;</emphasis>', before
+    its usage is explained to the reader;</listitem>
+
+    <listitem>Copy the description of the <emphasis>echo</emphasis> command
+    from the chapter on shell arguments;</listitem>
+
+    <listitem>Remove the exercise that relies on understanding the meaning
+    of an <emphasis>asterisk</emphasis> &#8211; '<emphasis>*</emphasis>',
+    given that it is not yet explained by that point;</listitem>
+
+    <listitem>Remove the chapter on the file system tree from
+    <citetitle>Commence the Commands</citetitle>, given that it belongs to
+    another minibook;</listitem>
+
+    <listitem>Remove the section on the <emphasis>rename</emphasis> command
+    from <citetitle>Commence the Commands</citetitle>, given that it belongs
+    to another minibook;</listitem>
+
+    <listitem>Modify the titles to use a consistent convention for
+    capitalisation and special characters;</listitem>
+
+    <listitem>Replace selected external links with userbie.com;</listitem>
+
+    <listitem>Add the missing Addendum to the Free Documentation
+    License;</listitem>
+
+    <listitem>Modify the abstract and add a preface;</listitem>
+
+    <listitem>Implement the <emphasis>[feedback]</emphasis> link;</listitem>
+
+    <listitem>Modify the license notice to strictly use version 1.3 of the
+    Free Documentation License only, with Aleksander Korzynski as the proxy
+    for deciding if a later version can be used;</listitem>
+
+    <listitem>Modify the license notice to make the
+    <citetitle>Preface</citetitle> an Invariant section;</listitem>
+
+    <listitem>Display the license notice prominently in the abstract, the
+    <emphasis>LICENSE</emphasis> file and the appendix containing the full
+    text of the license;</listitem>
+
+    <listitem>Use the command <emphasis>git describe --tags</emphasis>
+    to generate the version string of the book;</listitem>
+
+    <listitem>Modify the build scripts to save the publisher name in the
+    book metadata;</listitem>
+
+    <listitem>Create a site-specific CSS file to be replaced by a site
+    owner;</listitem>
+
+    <listitem>Change the command used to generate a PDF file from
+    <emphasis>build</emphasis> to <emphasis>pdf</emphasis>;</listitem>
+
+    <listitem>Use <emphasis>xsltproc</emphasis> instead of
+    <emphasis>xmlto</emphasis> as the command to invoke the XSLT
+    processor;</listitem>
+
+    <listitem>Improve error handling in the <emphasis>make</emphasis>
+    script;</listitem>
+
+    <listitem>Modify the <emphasis>make</emphasis> script to generate unique
+    IDs for book parts and chapters;</listitem>
+
+    <listitem>Various bug fixes and finishing touches;</listitem>
+
+  </orderedlist>
+
+  Feel free to contact the editor of this edition:
+
+  <itemizedlist mark="bullet">
+
+    <listitem>Aleksander Korzynski: ak@wants-no-spam.akorzy.com
+    (remove <emphasis>wants-no-spam.</emphasis>), <ulink
+    url="https://www.akorzy.com"/></listitem>
+
+  </itemizedlist>
+   
+  Published by:
+
+  <itemizedlist mark="bullet">
+    <listitem>KZS Press, trading name of KZS Commerce Ltd, 7 Kings Avenue,
+    Manchester, M8 5AS, UK</listitem>
+  </itemizedlist>
+
+  This edition is available gratis at: <ulink
+  url="https://userbie.com/commence-the-commands"/>. The source
+  code is available on request from the publisher: <ulink
+  url="https://userbie.com/contact-us"/>.
+
+  </revremark>
+</revision>
+
+<revision>
+  <revnumber>v2.0-628-gc697d31</revnumber>
+  <date>5 Aug 2015</date>
+  <authorinitials>Paul Cobbaut</authorinitials>
+
+  <revremark>
+  Linux Training is a series of six books on Linux:
+  <citetitle>Linux Fundamentals</citetitle>, 
+  <citetitle>Linux System Administration</citetitle>, 
+  <citetitle>Linux Servers</citetitle>, 
+  <citetitle>Linux Storage</citetitle>, 
+  <citetitle>Linux Security</citetitle> and 
+  <citetitle>Linux Networking</citetitle>.
+
+  This edition was authored and published by:
+
+  <itemizedlist mark="bullet">
+
+    <listitem>Paul Cobbaut: paul.cobbaut@gmail.com, <ulink
+    url="http://www.linkedin.com/in/cobbaut"/></listitem>
+
+  </itemizedlist>
+
+  Contributors to the Linux Training project:
+
+  <itemizedlist mark="bullet">
+
+    <listitem>Serge van Ginderachter: serge@ginsys.eu, build scripts and
+    infrastructure setup</listitem>
+
+    <listitem>Ywein Van den Brande: ywein@crealaw.eu, license and legal
+    sections</listitem>
+
+    <listitem>Hendrik De Vloed: hendrik.devloed@ugent.be, buildheader.pl
+    script</listitem>
+
+  </itemizedlist>
+
+  Expressions of gratitude go to reviewers:
+
+  <itemizedlist mark="bullet">
+
+    <listitem>Wouter Verhelst: wo@uter.be, <ulink
+    url="http://grep.be"/></listitem>
+
+    <listitem>Geert Goossens: mail.goossens.geert@gmail.com, <ulink
+    url="http://www.linkedin.com/in/geertgoossens"/></listitem>
+
+    <listitem>Elie De Brauwer: elie@de-brauwer.be, <ulink
+    url="http://www.de-brauwer.be"/></listitem>
+
+    <listitem>Christophe Vandeplas: christophe@vandeplas.com, <ulink
+    url="http://christophe.vandeplas.com"/></listitem>
+
+    <listitem>Bert Desmet: bert@devnox.be, <ulink
+    url="http://blog.bdesmet.be"/></listitem>
+
+    <listitem>Rich Yonts: richyonts@gmail.com</listitem>
+
+  </itemizedlist>
+
+  All six books are available in source-code form at: <ulink
+  url="https://github.com/linuxtraining/lt/tree/v2.0-628-gc697d31"/>.
+  More information and older HTML and PDF editions of the books are available
+  at: <ulink url="http://linux-training.be"/>.
+
+  </revremark>
+
+</revision>
+
+</revhistory>
+
+
