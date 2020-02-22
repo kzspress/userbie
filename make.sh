@@ -370,6 +370,7 @@ build_xml() {
 	}
 
 build_pdf() {
+  echor PDF generation disabled in this edition && exit 1
 	set_xsl
 	set_JAVA
 	echo 
