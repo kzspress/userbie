@@ -16,6 +16,8 @@ HTMLDIR="$OUTPUTDIR/html"
 HTMLIMGDIR="$HTMLDIR/images"
 IMAGESDIR="./images" 
 MODULESDIR="./modules"
+HEADERDIR="$MODULESDIR/header"
+FOOTERDIR="$MODULESDIR/footer"
 BUILDDIR="."
 LIBDIR="$BUILDDIR/lib"
 export FOP_OPTS="-Xms512m -Xmx512m"
@@ -153,12 +155,16 @@ check_book() {
 	}
 
 build_header() {
-	cat modules/header/doctype.xml | sed s@LIBDIR@../$LIBDIR@g	> $headerfile
+	cat "$HEADERDIR/doctype.xml" | sed s@LIBDIR@../$LIBDIR@g	> $headerfile
         echo "<book>"                                           >> $headerfile
         echo "<bookinfo>"                                       >> $headerfile
         echo "<title>$BOOKTITLE</title>"                        >> $headerfile
+	local abstractFile="$HEADERDIR/abstract_$book.xml"
+	if [ ! -f "$abstractFile" ] 
+		then abstractFile="$HEADERDIR/abstract_minibook.xml"
+	fi
 	$BUILDDIR/buildheader.pl \
-		"modules/header/abstract.xml" \
+		"$abstractFile" \
 		"$BOOKSDIR/$book/copyrights" \
 		"$BOOKSDIR/$book/authors" \
 		"$BOOKSDIR/$book/contributors" \
@@ -167,10 +173,11 @@ build_header() {
 		"$YEAR" \
 		"$TEACHER"			                            		>> $headerfile	 
         echo "</bookinfo>"                                      >> $headerfile
+	cat "$HEADERDIR/preface.xml"				>> $headerfile
 	}
 
 build_footer() {
-	cat modules/footer/footer.xml >$footerfile
+	cat "$FOOTERDIR/footer.xml" >$footerfile
 	}
 
 build_part_body() {
@@ -184,8 +191,8 @@ build_part_body() {
             modfile=$OUTPUTDIR/mod_$mod.xml
 
             # enumerate module files for this module $mod
-	    if [ -d modules/$mod ]
-	    then	MODULES=$(ls modules/${mod}/*)
+	    if [ -d "$MODULESDIR/$mod" ]
+	    then	MODULES=$(ls ${MODULESDIR}/${mod}/*)
  	    else	echo "Error: module $mod does not exist!" 
 			echor "Fatal error occurred!"
 			exit 1

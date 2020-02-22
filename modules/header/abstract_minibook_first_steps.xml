@@ -1,0 +1,65 @@
+<abstract>
+
+<para><citetitle>Commence the Commands</citetitle> will gently and humorously
+introduce you to the useful art of controlling a Linux computer using the
+keyboard, rather than the mouse. It comes in the form of a quick-start guide,
+which should take about 30 minutes to study. In addition, it is combined
+with practical exercises, which should take about 90 minutes to do.</para>
+
+<para>This minibook is a part of a full-length book, entitled <citetitle>Linux
+Doesn't Have to Be Hard: A Beginner's Guide</citetitle>, comprehensively
+covering not only the command line, but also other fundamental Linux
+features. The full-length book has not been published yet and is currently
+work-in-progress. If you like this quick-start guide, please subscribe to
+the <ulink url="https://userbie.com/newsletter">Userbie Newsletter</ulink>,
+where newly published free Linux guides will be announced.</para>
+
+<para>A crowdfunding campaign will be organised to fund the publication of
+the full-length book. Please subscribe to the newsletter above for information
+about the campaign.</para>
+
+<para>This guide, as well as the full-length book, are intended for novice
+Linux systems administrators or ordinary Linux users that want to learn
+more about their operating system. To make the most out of this book, you
+are advised to read it next to a Linux machine, so that you can immediately
+practice what you learn.</para>
+
+<para>This quick-start guide covers accessing and searching the Linux
+manuals, as well as working with files and directories. It is the minimal
+information you need to get started with the command line.</para>
+
+<para>This book belongs to the <citetitle>Userbie</citetitle> series of
+guides, which are available gratis. They are community-developed and you
+are encouraged to contribute. Click on the <emphasis>[feedback]</emphasis>
+link, located at the end of every paragraph, to provide feedback to the
+maintainers. If your suggested changes are incorporated into the guide,
+your name will feature as a contributor to the guide.</para>
+
+<para> This book has been originally written by Paul Cobbaut. Its
+maintenance has since been taken over by Aleksander Korzynski and
+the Userbie team. The latest version of this guide is available
+at: <ulink url="http://userbie.com/commence-the-commands"
+>userbie.com/commence-the-commands</ulink>.</para>
+
+<para>This edition has been created by Aleksander Korzynski. Feel
+free to contact him at ak@wants-no-spam.akorzy.com (remove
+<emphasis>wants-no-spam.</emphasis>). His personal website is located at
+<ulink url="http://www.akorzy.com">akorzy.com</ulink>.</para>
+
+<para>The publisher of this edition is KZS Press, trading name of KZS
+Commerce Ltd, 7 Kings Avenue, Manchester, Greater Manchester, M8 5AS,
+United Kingdom.</para>
+
+<para>Copyright &#169; 2007-2015, 2020 [COPYRIGHTS]</para>
+<para>Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 published by
+the Free Software Foundation; with no Front-Cover Texts, no Back-Cover Texts
+and an Invariant Section entitled Preface; with Aleksander Korzynski as the
+proxy for deciding if a later version of the license can be used. A copy of
+the license is included in the section entitled <link linkend="license">GNU
+Free Documentation License</link>.</para>
+
+<para>Linux&#174; is the registered trademark of Linus Torvalds in the U.S. and
+other countries. UNIX&#174; is a registered trademark of The Open Group.</para>
+
+</abstract>

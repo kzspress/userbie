@@ -1,23 +1,67 @@
-This book is meant to be used in an instructor-led training. For self-study, 
-the intent is to read this book next to a working Linux computer so you can 
-immediately do every subject, practice each command.
+Commence the Commands will gently and humorously introduce you to the useful
+art of controlling a Linux computer using the keyboard, rather than the
+mouse. It comes in the form of a quick-start guide, which should take about
+30 minutes to study. In addition, it is combined with practical exercises,
+which should take about 90 minutes to do.
 
-This book is aimed at novice Linux system administrators (and might be 
-interesting and useful for home users that want to know a bit more about their 
-Linux system). However, this book is not meant as an introduction to Linux 
-desktop applications like text editors, browsers, mail clients, multimedia or 
-office applications.
+This minibook is a part of a full-length book, entitled Linux Doesn't
+Have to Be Hard: A Beginner's Guide, comprehensively covering not only the
+command line, but also other fundamental Linux features. The full-length
+book has not been published yet and is currently work-in-progress. If you
+like this quick-start guide, please subscribe to the Userbie Newsletter
+<http://userbie.com/newsletter>, where newly published free Linux guides
+will be announced.
 
-The Project Homepage is at http://linux-training.be/, the git hosted source
-code repository is hosted at Github https://github.com/linuxtraining/.
+A crowdfunding campaign will be organised to fund the publication of the
+full-length book. Please subscribe to the newsletter above for information
+about the campaign.
 
-Licensed under the GNU Free Documentation License
-( http://www.gnu.org/licenses/fdl.html )
+This guide, as well as the full-length book, are intended for novice Linux
+systems administrators or ordinary Linux users that want to learn more about
+their operating system. To make the most out of this book, you are advised
+to read it next to a Linux machine, so that you can immediately practice
+what you learn.
+
+This quick-start guide covers accessing and searching the Linux manuals,
+as well as working with files and directories. It is the minimal information
+you need to get started with the command line.  
+
+This book belongs to the Userbie series of guides, which are available
+gratis. They are community-developed and you are encouraged to
+contribute. Click on the [feedback] link, located at the end of every
+paragraph, to provide feedback to the maintainers. If your suggested changes
+are incorporated into the guide, your name will feature as a contributor to
+the guide.
+
+This book has been originally written by Paul Cobbaut. Its
+maintenance has since been taken over by Aleksander Korzynski and
+the Userbie team. The latest version of this guide is available at:
+<http://userbie.com/commence-the-commands>.
+
+This edition has been created by Aleksander Korzynski. Feel free to contact
+him at <ak@wants-no-spam.akorzy.com> (remove wants-no-spam.). His personal
+website is located at <http://akorzy.com>.
+
+The publisher of this edition is KZS Press, trading name of KZS Commerce
+Ltd, 7 Kings Avenue, Manchester, Greater Manchester, M8 5AS, United Kingdom.
+
+Copyright © 2007-2015, 2020 Netsec BVBA, Paul Cobbaut, Aleksander Korzynski
+
+Permission is granted to copy, distribute and/or modify this document under
+the terms of the GNU Free Documentation License, Version 1.3 published by the
+Free Software Foundation; with no Front-Cover Texts, no Back-Cover Texts and
+an Invariant Section entitled Preface; with Aleksander Korzynski as the proxy
+for deciding if a later version of the license can be used. A copy of the
+license is included in the section entitled GNU Free Documentation License.
+
+Linux® is the registered trademark of Linus Torvalds in the U.S. and other
+countries. UNIX® is a registered trademark of The Open Group.  
 
 
 ** Dependencies
 
-- Java : on Ubuntu we use the Canonical partner provided sun-java6-bin package. We have a JAVAHOME hardcoded to this somewhere in the build script.
+- Java : on Ubuntu we use the Canonical partner provided sun-java6-bin
+  package. We have a JAVAHOME hardcoded to this somewhere in the build script.
   - sun-java6-bin
   - default-jdk
 - xmlto : for building the html pages
