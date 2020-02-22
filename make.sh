@@ -179,6 +179,7 @@ build_header() {
 		"$BOOKSDIR/$book/editors" \
 		"$BOOKSDIR/$book/contributors" \
 		"$BOOKSDIR/$book/reviewers" \
+		"$BOOKSDIR/$book/publisher" \
 		"$PUBDATE" \
 		"$YEAR" \
 		"$TEACHER"			                            		>> $headerfile	 

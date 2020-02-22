@@ -8,6 +8,7 @@ my $authorsfile = shift @ARGV;
 my $editorsfile = shift @ARGV;
 my $contributorsfile = shift @ARGV;
 my $reviewersfile = shift @ARGV;
+my $publisherfile = shift @ARGV;
 my $pubdate = shift @ARGV;
 my $year = shift @ARGV;
 my $releaseinfo = shift @ARGV;
@@ -90,6 +91,18 @@ while(<REVW>){
 }
 close REVW;
 
+open PUBF,"<$publisherfile" or die "Can't open publisher $publisherfile";
+while(<PUBF>){
+	chomp;
+	next if /^#/;
+	@PUBLISHER=split /;/;
+	next unless scalar(@PUBLISHER)==2;
+	$publishername=$PUBLISHER[0];
+	$publisheraddress=$PUBLISHER[1];
+	last;
+}
+close PUBF;
+
 print "<authorgroup>\n";
 if ($teacher) {
 		print "<author>\n";
@@ -112,6 +125,13 @@ foreach $editor (@EDITORS) {
 	print "</editor>\n";
 }
 print "</authorgroup>\n";
+
+if ($publishername && $publisheraddress) {
+	print "<publisher>\n";
+	print "<publishername>$publishername</publishername>\n";
+	print "<address>$publisheraddress</address>\n";
+	print "</publisher>\n";
+}
 
 # Start output header content.
 
@@ -185,6 +205,11 @@ while(<ABSTR>) {
 		s/REVIEWERS/$reviewers/;
 	}
 
+	if(/PUBLISHER/) {
+		if ($publishername && $publisheraddress) {
+			s/\[PUBLISHER\]/$publishername, $publisheraddress/;
+		}
+	}
 	print;
 	
 }
