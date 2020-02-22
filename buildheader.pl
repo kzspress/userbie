@@ -72,19 +72,22 @@ while(<REVW>){
 }
 close REVW;
 
-print "<author>\n";
+print "<authorgroup>\n";
 if ($teacher) {
+		print "<author>\n";
 		print "<firstname></firstname>\n";
 		print "<surname>$teacher</surname>\n";
+		print "</author>\n";
 	}
 else {
-	# using a loop but only the first author is used by docbook
 	foreach $author (@AUTHORS) {
+		print "<author>\n";
 		print "<firstname>$author->{firstname}</firstname>\n";
 		print "<surname>$author->{lastname}</surname>\n";
+		print "</author>\n";
 	}
 }
-print "</author>\n";
+print "</authorgroup>\n";
 
 # Start output header content.
 
