@@ -1,5 +1,5 @@
 <?hard-pagebreak?>
-<section><title>all files are case sensitive</title>
+<section><title>All Files Are Case Sensitive</title>
 	<para>Files on Linux (or any Unix) are <command>case sensitive</command><indexterm><primary>case sensitive</primary></indexterm>. This means that <command>FILE1</command> is different from <command>file1</command>, and <command>/etc/hosts</command> is different from <command>/etc/Hosts</command> (the latter one does not exist on a typical Linux computer).</para>
 	<para>This screenshot shows the difference between two files, one with upper case <command>W</command>, the other with lower case <command>w</command>.</para>
 	<screen>paul@laika:~/Linux$ <command>ls</command>
@@ -10,10 +10,10 @@ paul@laika:~/Linux$ <command>ls -lh Winter.txt</command>
 -rw-r--r-- 1 paul paul 0 Oct 15 08:56 Winter.txt
 </screen>
 </section>
-<section><title>everything is a file</title>
+<section><title>Everything Is a File</title>
 	<para>A <command>directory</command> is a special kind of <command>file</command>, but it is still a (case sensitive!) <command>file</command>. Each terminal window (for example <command>/dev/pts/4</command>), any hard disk or partition (for example <command>/dev/sdb1</command>) and any process are all represented somewhere in the <command>file system</command> as a <command>file</command>. It will become clear throughout this course that everything on Linux is a <command>file</command>.</para>
 </section>
-<section><title>file</title>
+<section><title><emphasis>file</emphasis></title>
 	<para>The <command>file</command><indexterm><primary>file</primary></indexterm> utility determines the file type. Linux does not use extensions to determine the file type. The command line does not care whether a file ends in .txt or .pdf. As a system administrator, you should use the <command>file</command> command to determine the file type. Here are some examples on a typical Linux system.</para>
 	<screen>paul@laika:~$ <command>file pic33.png</command>
 pic33.png: PNG image data, 3840 x 1200, 8-bit/color RGBA, non-interlaced
@@ -33,8 +33,8 @@ root@debian6~# <command>file -s /proc/cpuinfo</command>
 /proc/cpuinfo: ASCII C++ program text</screen>
 </section>
 <?hard-pagebreak?>
-<section><title>touch</title>
-	<section><title>create an empty file</title>
+<section><title><emphasis>touch</emphasis></title>
+	<section><title>Create an Empty File</title>
 	<para>One easy way to create an empty file is with <command>touch</command><indexterm><primary>touch(1)</primary></indexterm>. (We will see many other ways for creating files later in this book.)</para>
 	<para>This screenshot starts with an empty directory, creates two files with <command>touch</command> and the lists those files.</para>
 	<screen>paul@debian7:~$ <command>ls -l</command>
@@ -47,7 +47,7 @@ total 0
 -rw-r--r-- 1 paul paul 0 Oct 15 08:56 file42
 paul@debian7:~$</screen>
 	</section>
-	<section><title>touch -t</title>
+	<section><title><emphasis>touch -t</emphasis></title>
 		<para>The <command>touch</command> command can set some properties while creating empty files. Can you determine what is set by looking at the next screenshot? If not, check the manual for <command>touch</command>.</para>
 		<screen>paul@debian7:~$ <command>touch -t 200505050000 SinkoDeMayo</command>
 paul@debian7:~$ <command>touch -t 130207111630 BigBattle.txt</command>
@@ -61,8 +61,8 @@ paul@debian7:~$</screen>
 	</section>
 </section>
 <?hard-pagebreak?>
-<section><title>rm</title>
-	<section><title>remove forever</title>
+<section><title><emphasis>rm</emphasis></title>
+	<section><title>Remove Forever</title>
 	<para>When you no longer need a file, use <command>rm</command><indexterm><primary>rm</primary></indexterm> to remove it. Unlike some graphical user interfaces, the command line in general does not have a <command>waste bin</command> or <command>trash can</command> to recover files. When you use <command>rm</command> to remove a file, the file is gone. Therefore, be careful when removing files!</para>
 	<screen>paul@debian7:~$ <command>ls</command>
 BigBattle.txt  file33  file42  SinkoDeMayo
@@ -71,7 +71,7 @@ paul@debian7:~$ <command>ls</command>
 file33  file42  SinkoDeMayo
 paul@debian7:~$</screen>
 	</section>
-	<section><title>rm -i</title>
+	<section><title><emphasis>rm -i</emphasis></title>
 		<para>To prevent yourself from accidentally removing a file, you can type <command>rm -i</command>.</para>
 		<screen>paul@debian7:~$ <command>ls</command>
 file33  file42  SinkoDeMayo
@@ -83,7 +83,7 @@ paul@debian7:~$ <command>ls</command>
 file42  SinkoDeMayo
 paul@debian7:~$</screen>
 	</section>
-	<section><title>rm -rf</title>
+	<section><title><emphasis>rm -rf</emphasis></title>
 		<para>By default, <command>rm -r</command> will not remove non-empty directories. However <command>rm</command> accepts several options that will allow you to remove any directory. The <command>rm -rf</command><indexterm><primary>rm -rf</primary></indexterm> statement is famous because it will erase anything (providing that you have the permissions to do so). When you are logged on as root, be very careful with <command>rm -rf</command> (the <command>f</command> means <command>force</command> and the <command>r</command> means <command>recursive</command>) since being root implies that permissions don't apply to you. You can literally erase your entire file system by accident.</para>
 		<screen>paul@debian7:~$ <command>mkdir test</command>
 paul@debian7:~$ <command>rm test</command>
@@ -95,8 +95,8 @@ paul@debian7:~$</screen>
 	</section>
 </section>
 <?hard-pagebreak?>
-<section><title>cp</title>
-	<section><title>copy one file</title>
+<section><title><emphasis>cp</emphasis></title>
+	<section><title>Copy One File</title>
 	<para>To copy a file, use <command>cp</command><indexterm><primary>cp</primary></indexterm> with a source and a target argument.</para>
 	<screen>paul@debian7:~$ <command>ls</command>
 file42  SinkoDeMayo
@@ -104,14 +104,14 @@ paul@debian7:~$ <command>cp file42 file42.copy</command>
 paul@debian7:~$ <command>ls</command>
 file42  file42.copy  SinkoDeMayo</screen>
 	</section>
-	<section><title>copy to another directory</title>
+	<section><title>Copy to Another Directory</title>
 	<para>If the target is a directory, then the source files are copied to that target directory.</para>
 	<screen>paul@debian7:~$ <command>mkdir dir42</command>
 paul@debian7:~$ <command>cp SinkoDeMayo dir42</command>
 paul@debian7:~$ <command>ls dir42/</command>
 SinkoDeMayo</screen>
 	</section>
-	<section><title>cp -r</title>
+	<section><title><emphasis>cp -r</emphasis></title>
 		<para>To copy complete directories, use <command>cp -r</command><indexterm><primary>cp(1)</primary></indexterm> (the <command>-r</command> option forces <command>recursive</command> copying of all files in all subdirectories).</para>
 		<screen>paul@debian7:~$ <command>ls</command>
 dir42  file42  file42.copy  SinkoDeMayo
@@ -121,13 +121,13 @@ dir33  dir42  file42  file42.copy  SinkoDeMayo
 paul@debian7:~$ <command>ls dir33/</command>
 SinkoDeMayo</screen>
 	</section>
-	<section><title>copy multiple files to directory</title>
+	<section><title>Copy Multiple Files to Directory</title>
 		<para>You can also use cp to copy multiple files into a directory. In this case, the last argument (a.k.a. the target) must be a directory.</para>
 		<screen>paul@debian7:~$ <command>cp file42 file42.copy SinkoDeMayo dir42/</command>
 paul@debian7:~$ <command>ls dir42/</command>
 file42  file42.copy  SinkoDeMayo</screen>
 	</section>
-	<section><title>cp -i</title>
+	<section><title><emphasis>cp -i</emphasis></title>
 		<para>To prevent <command>cp</command> from overwriting existing files, use the <command>-i</command> (for interactive) option.</para>
 		<screen>paul@debian7:~$ <command>cp SinkoDeMayo file42</command>
 paul@debian7:~$ <command>cp SinkoDeMayo file42</command>
@@ -137,8 +137,8 @@ paul@debian7:~$</screen>
 	</section>
 </section>
 <?hard-pagebreak?>
-<section><title>mv</title>
-<section><title>rename files with mv</title>
+<section><title><emphasis>mv</emphasis></title>
+<section><title>Rename Files with <emphasis>mv</emphasis></title>
 	<para>Use <command>mv</command><indexterm><primary>mv</primary></indexterm> to rename a file or to move the file to another directory.</para>
 	<screen>paul@debian7:~$ <command>ls</command>
 dir33  dir42  file42  file42.copy  SinkoDeMayo
@@ -148,7 +148,7 @@ dir33  dir42  file33  file42.copy  SinkoDeMayo
 paul@debian7:~$</screen>
 	<para>When you need to rename only one file then <command>mv</command> is the preferred command to use.</para>
 </section>
-<section><title>rename directories with mv</title>
+<section><title>Rename Directories with <emphasis>mv</emphasis></title>
 	<para>The same <command>mv</command> command can be used to rename directories.</para>
 	<screen>paul@debian7:~$ <command>ls -l</command>
 total 8
@@ -167,7 +167,7 @@ drwxr-xr-x 2 paul paul 4096 Oct 15 09:36 dir42
 -rw-r--r-- 1 paul paul    0 May  5  2005 SinkoDeMayo
 paul@debian7:~$</screen>
 </section>
-<section><title>mv -i</title>
+<section><title><emphasis>mv -i</emphasis></title>
 	<para>The <command>mv</command> also has a <command>-i</command> switch similar to <command>cp</command> and <command>rm</command>.</para>
 	<para>this screenshot shows that <command>mv -i</command> will ask permission to overwrite an existing file.</para>
 <screen>paul@debian7:~$ <command>mv -i file33 SinkoDeMayo</command>

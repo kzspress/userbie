@@ -1,5 +1,5 @@
 <?hard-pagebreak?>
-<section><title>practice: working with files</title>
+<section><title>Practice: Working with Files</title>
 	<para>1. List the files in the /bin directory</para>
 	<para>2. Display the type of file of /bin/cat, /etc/passwd and /usr/bin/passwd.</para>
 	<para>3a. Download the first page of the kernel.org website using the following command.</para>

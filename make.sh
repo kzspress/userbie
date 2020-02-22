@@ -46,7 +46,7 @@ YEAR=$(date +%Y)
 
 help() {
 	echo
-	echo "linux-training book build script\t\thttp://linux-training.be"
+	echo "Userbie book series build script\t\thttp://userbie.com"
 	echo
 	echo $0 [OPTION] command [book]
 	echo 
@@ -168,6 +168,9 @@ build_header() {
         echo "<book>"                                           >> $headerfile
         echo "<bookinfo>"                                       >> $headerfile
         echo "<title>$BOOKTITLE</title>"                        >> $headerfile
+	if [ -n "$BOOKSUBTITLE" ]
+		then echo "<subtitle>$BOOKSUBTITLE</subtitle>"               >> $headerfile
+	fi
 	local abstractFile="$HEADERDIR/abstract_$book.xml"
 	if [ ! -f "$abstractFile" ] 
 		then abstractFile="$HEADERDIR/abstract_minibook.xml"
@@ -319,7 +322,9 @@ build_body() {
 			# set booktitle for custompart
 			if [ $(echo $CHAPTERS $APPENDICES | wc -w ) -gt 1 ]
 			then	BOOKTITLE="Appendices"
+				BOOKSUBTITLE="$BOOKSUBTITLE"
 			else	BOOKTITLE="Appendix"
+				BOOKSUBTITLE="$BOOKSUBTITLE"
 			fi
 			echod "Adding the custom part at the end."
 			fill_part "$partfile" "${BOOKTITLE,,}"

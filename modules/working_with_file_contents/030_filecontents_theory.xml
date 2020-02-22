@@ -1,6 +1,6 @@
 <?hard-pagebreak?>
 
-<section><title>echo</title>
+<section><title><emphasis>echo</emphasis></title>
 
 <para>The 
 <command>echo</command><indexterm><primary>echo(1)</primary></indexterm>
@@ -15,7 +15,7 @@ Smurfs are blue</screen>
 demonstrate shell features.</para>
 </section>
 
-<section><title>head</title>
+<section><title><emphasis>head</emphasis></title>
 	<para>You can use <command>head</command><indexterm><primary>head(1)</primary></indexterm> to display the first ten lines of a file.</para>
 	<screen>paul@debian7~$ <command>head /etc/passwd</command>
 root:x:0:0:root:/root:/bin/bash
@@ -40,7 +40,7 @@ paul@debian7~$</screen>
 	<screen>paul@debian7~$ <command>head -c14 /etc/passwd</command>
 root:x:0:0:roopaul@debian7~$</screen>
 </section>
-<section><title>tail</title>
+<section><title><emphasis>tail</emphasis></title>
 	<para>Similar to <command>head</command>, the <command>tail</command><indexterm><primary>tail(1)</primary></indexterm> command will display the last ten lines of a file.</para>
 	<screen>paul@debian7~$ <command>tail /etc/services</command>
 vboxd           20012/udp
@@ -62,13 +62,13 @@ fido            60179/tcp                       # fidonet EMSI over TCP
 paul@debian7~$</screen>
 	<para>The <command>tail</command> command has other useful options, some of which we will use during this course.</para>
 </section>
-<section><title>cat</title>
+<section><title><emphasis>cat</emphasis></title>
 	<para>The <command>cat</command><indexterm><primary>cat</primary></indexterm> command is one of the most universal tools, yet all it does is copy <command>standard input</command><indexterm><primary>standard input</primary></indexterm> to <command>standard output</command><indexterm><primary>standard output</primary></indexterm>. In combination with the shell this can be very powerful and diverse. Some examples will give a glimpse into the possibilities. The first example is simple, you can use cat to display a file on the screen. If the file is longer than the screen, it will scroll to the end.</para>
 	<screen>paul@debian8:~$ <command>cat /etc/resolv.conf</command>
-domain linux-training.be
-search linux-training.be
+domain userbie.com 
+search userbie.com
 nameserver 192.168.1.42</screen>
-	<section><title>copy files</title>
+	<section><title>Copy Files</title>
 		<para>The <command>cat</command> command can be used to copy files. We will explain in detail what happens here in the bash shell chapter.</para>
 		<screen>paul@debian8:~$ <command>cat winter.txt</command>
 It is very cold today!
@@ -77,7 +77,7 @@ paul@debian8:~$ <command>cat cold.txt</command>
 It is very cold today!
 paul@debian8:~$</screen>		
 	</section>
-	<section><title>concatenate</title>
+	<section><title>Concatenate</title>
 
 	<para><command>cat</command> is short for
 	<command>concatenate</command>. One of the basic uses of
@@ -104,7 +104,7 @@ two
 three
 paul@debian8:~$</screen>
 	</section>
-	<section><title>create files</title>
+	<section><title>Create Files</title>
 		<para>You can use <command>cat</command> to create flat text files. Type the <command>cat &#062; winter.txt</command> command as shown in the screenshot below. Then type one or more lines, finishing each line with the enter key. After the last line, type and hold the Control (Ctrl) key and press d.</para>
 		<screen>paul@debian8:~$ <command>cat &#062; winter.txt</command>
 It is very cold today!
@@ -114,8 +114,8 @@ paul@debian8:~$</screen>
 		<para>The <command>Ctrl d</command><indexterm><primary>Ctrl d</primary></indexterm> key combination will send an <command>EOF</command><indexterm><primary>EOF</primary></indexterm> (End of File) to the running process ending the <command>cat</command> command.</para>
 	</section>
 <?hard-pagebreak?>
-	<section><title>custom end marker</title>
-		<para>You can choose an end marker for <command>cat</command> with <command>&#060;&#060;</command> as is shown in this screenshot. This construction is called a <command>here directive</command><indexterm><primary>here directive</primary></indexterm> and will end the <command>cat</command> command.</para>
+	<section><title>Custom End-Marker</title>
+		<para>You can choose an end-marker for <command>cat</command> with <command>&#060;&#060;</command> as is shown in this screenshot. This construction is called a <command>here directive</command><indexterm><primary>here directive</primary></indexterm> and will end the <command>cat</command> command.</para>
 		<screen>paul@debian8:~$ <command>cat &#062; hot.txt &#060;&#060;stop</command>
 &#062; It is hot today!
 &#062; Yes it is summer.
@@ -126,7 +126,7 @@ Yes it is summer.
 paul@debian8:~$</screen>
 	</section>
 </section>
-<section><title>tac</title>
+<section><title><emphasis>tac</emphasis></title>
 	<para>Just one example will show you the purpose of <command>tac</command><indexterm><primary>tac</primary></indexterm> (cat backwards).</para>
 	<screen>paul@debian8:~$ <command>cat count</command>
 one
@@ -140,10 +140,10 @@ two
 one</screen>
 </section>
 <?hard-pagebreak?>
-<section><title>more and less</title>
+<section><title><emphasis>more</emphasis> and <emphasis>less</emphasis></title>
 	<para>The <command>more</command><indexterm><primary>more(1)</primary></indexterm> command is useful for displaying files that take up more than one screen. More will allow you to see the contents of the file page by page. Use the space bar to see the next page, or <command>q</command> to quit. Some people prefer the <command>less</command><indexterm><primary>less(1)</primary></indexterm> command to <command>more</command>.</para>
 </section>
-<section><title>strings</title>
+<section><title><emphasis>strings</emphasis></title>
 	<para>With the <command>strings</command><indexterm><primary>strings(1)</primary></indexterm> command you can display readable ascii strings found in (binary) files. This example locates the <command>ls</command> binary then displays readable strings in the binary file (output is truncated).</para>
 	<screen>
 paul@laika:~$ which ls

@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 
-BOOKTITLE="first steps on the command line"
+BOOKTITLE="Commence the Commands"
+BOOKSUBTITLE="A Quick-Start Guide to the Linux Shell"
 
 ##################
 # define minibook
