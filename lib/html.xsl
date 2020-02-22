@@ -4,6 +4,6 @@
 
   <xsl:import href="./xsl/html/chunk.xsl"/>
   <xsl:param name="chunk.section.depth" select="0"/>
-  <xsl:param name="html.stylesheet" select="'html.css'"/>
+  <xsl:param name="html.stylesheet">html.css site.css</xsl:param>
 
 </xsl:stylesheet>

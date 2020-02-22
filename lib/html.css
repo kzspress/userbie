@@ -1,5 +1,5 @@
 body {
-         font-family: luxi sans,sans-serif;
+        font-family: sans-serif;
 }
 
 .screen {
@@ -14,5 +14,4 @@ body {
         border-radius: 2.5px;
         -moz-border-radius: 2.5px;
         margin: 0.5em 2em;
- 
 }

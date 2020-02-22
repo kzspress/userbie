@@ -24,6 +24,7 @@ export FOP_OPTS="-Xms512m -Xmx512m"
 export BOOKSDIR=./books
 HTMLXSL="$LIBDIR/html.xsl"
 HTMLCSS="$LIBDIR/html.css"
+SITECSS="$LIBDIR/site.css"
 
 ### script configuration ###
 
@@ -402,6 +403,7 @@ build_html() {
 
     # Copy css file to html directory
     cp $HTMLCSS $HTMLDIR
+    cp $SITECSS $HTMLDIR
 
     # Run xsltproc in $HTMLDIR to generate the html
     echo "Converting xml to html ..."
