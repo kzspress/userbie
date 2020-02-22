@@ -3,7 +3,9 @@
                 version="1.0">
 
   <xsl:import href="./xsl/html/chunk.xsl"/>
+  <xsl:include href="./common.xsl"/>
   <xsl:param name="chunk.section.depth" select="0"/>
   <xsl:param name="html.stylesheet">html.css site.css</xsl:param>
+  <xsl:param name="ulink.target">_PARENT</xsl:param>
 
 </xsl:stylesheet>
