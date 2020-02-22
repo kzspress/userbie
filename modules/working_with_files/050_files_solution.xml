@@ -28,7 +28,7 @@ wget http://linux-training.be/files/books/LinuxFun.pdf</screen>
 	<screen>mkdir &#126;/testbackup ; cp -r &#126;/touched &#126;/testbackup/ </screen>
 	<para>10. Use one command to remove the directory &#126;/testbackup and all files into it.</para>
 	<screen>rm -rf &#126;/testbackup </screen>
-	<para>11. Create a directory &#126;/etcbackup and copy all *.conf files from /etc into it. Did you include all subdirectories of /etc ?</para>
+<!--	<para>11. Create a directory &#126;/etcbackup and copy all *.conf files from /etc into it. Did you include all subdirectories of /etc ?</para>
 	<screen>cp -r /etc/*.conf &#126;/etcbackup</screen>
-	<screen>Only *.conf files that are directly in /etc/ are copied.</screen>
+	<screen>Only *.conf files that are directly in /etc/ are copied.</screen> -->
 </section>
