@@ -213,10 +213,10 @@ build_part_body() {
             # Generate the start chapter/appendix tag
             case $modtype in
                 CHAPTERS)
-                    echo "<chapter>"      > $modfile
+                    echo "<chapter id=\"$mod\">"      > $modfile
                     ;;
                 APPENDICES)
-        		    echo "<appendix>" 	 > $modfile
+        		    echo "<appendix id=\"$mod\">" 	 > $modfile
                     ;;
             esac
             # Generate all the sections
