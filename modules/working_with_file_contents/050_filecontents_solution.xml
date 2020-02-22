@@ -27,5 +27,6 @@ Five (followed by Ctrl-d)</screen>
 	<para>11. Use <command>cat</command> to create a file named <command>tailing.txt</command> that contains the contents of <command>tailing.txt</command> followed by the contents of <command>/etc/passwd</command>.</para>
 	<screen>cat /etc/passwd >> tailing.txt</screen>
 	<para>12. Use <command>cat</command> to create a file named <command>tailing.txt</command> that contains the contents of <command>tailing.txt</command> preceded by the contents of <command>/etc/passwd</command>.</para>
-	<screen>mv tailing.txt tmp.txt ; cat /etc/passwd tmp.txt > tailing.txt</screen>
+	<screen>mv tailing.txt tmp.txt
+cat /etc/passwd tmp.txt > tailing.txt</screen>
 </section>

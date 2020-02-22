@@ -15,7 +15,8 @@ wget http://linux-training.be/files/books/LinuxFun.pdf</screen>
 	<para>3d. Display the type of file of wolf.pdf and LinuxFun.pdf.</para>
 	<screen>file wolf.pdf LinuxFun.pdf</screen>
 	<para>4. Create a directory &#126;/touched and enter it.</para>
-	<screen>mkdir &#126;/touched ; cd &#126;/touched</screen>
+	<screen>mkdir &#126;/touched
+cd &#126;/touched</screen>
 	<para>5. Create the files today.txt and yesterday.txt in touched.</para>
 	<screen>touch today.txt yesterday.txt</screen>
 	<para>6. Change the date on yesterday.txt to match yesterday's date.</para>
@@ -25,7 +26,8 @@ wget http://linux-training.be/files/books/LinuxFun.pdf</screen>
 	<para>8. Rename copy.yesterday.txt to kim</para>
 	<screen>mv copy.yesterday.txt kim</screen>
 	<para>9. Create a directory called &#126;/testbackup and copy all files from &#126;/touched into it.</para>
-	<screen>mkdir &#126;/testbackup ; cp -r &#126;/touched &#126;/testbackup/ </screen>
+	<screen>mkdir &#126;/testbackup
+cp -r &#126;/touched &#126;/testbackup/ </screen>
 	<para>10. Use one command to remove the directory &#126;/testbackup and all files into it.</para>
 	<screen>rm -rf &#126;/testbackup </screen>
 <!--	<para>11. Create a directory &#126;/etcbackup and copy all *.conf files from /etc into it. Did you include all subdirectories of /etc ?</para>
