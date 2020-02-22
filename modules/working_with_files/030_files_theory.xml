@@ -4,10 +4,11 @@
 	<para>This screenshot shows the difference between two files, one with upper case <command>W</command>, the other with lower case <command>w</command>.</para>
 	<screen>paul@laika:~/Linux$ <command>ls</command>
 winter.txt  Winter.txt
-paul@laika:~/Linux$ <command>cat winter.txt</command>
-It is cold.
-paul@laika:~/Linux$ <command>cat Winter.txt</command>
-It is very cold!</screen>
+paul@laika:~/Linux$ <command>ls -lh winter.txt</command>
+-rw-r--r-- 1 paul paul 0 Oct 15 08:57 winter.txt
+paul@laika:~/Linux$ <command>ls -lh Winter.txt</command>
+-rw-r--r-- 1 paul paul 0 Oct 15 08:56 Winter.txt
+</screen>
 </section>
 <section><title>everything is a file</title>
 	<para>A <command>directory</command> is a special kind of <command>file</command>, but it is still a (case sensitive!) <command>file</command>. Each terminal window (for example <command>/dev/pts/4</command>), any hard disk or partition (for example <command>/dev/sdb1</command>) and any process are all represented somewhere in the <command>file system</command> as a <command>file</command>. It will become clear throughout this course that everything on Linux is a <command>file</command>.</para>
