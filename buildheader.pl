@@ -11,7 +11,6 @@ my $reviewersfile = shift @ARGV;
 my $publisherfile = shift @ARGV;
 my $pubdate = shift @ARGV;
 my $year = shift @ARGV;
-my $releaseinfo = shift @ARGV;
 my $teacher = shift @ARGV;
 
 # Parse config files
@@ -136,7 +135,13 @@ if ($publishername && $publisheraddress) {
 # Start output header content.
 
 print "<pubdate>$pubdate</pubdate>\n";
-print "<releaseinfo>$releaseinfo</releaseinfo>\n";
+my $gitDescribe = `git describe --tags`
+	or die "error running git describe --tags\n";
+chomp $gitDescribe;
+if (substr($gitDescribe, 0, 1) eq "v") {
+	$gitDescribe = substr($gitDescribe, 1, length $gitDescribe);
+}
+print "<releaseinfo>$gitDescribe</releaseinfo>\n";
 
 open ABSTR,"<$abstractfile" or die "Can't open abstract $abstractfile";
 while(<ABSTR>) {

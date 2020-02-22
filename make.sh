@@ -39,7 +39,6 @@ V=""
 CHAPTERS=""
 APPENDICES=""
 
-DATECODE=$(date +%y%m%d | sed s/^0//)
 PUBDATE=$(date +'%Y-%m-%d')
 YEAR=$(date +%Y)
 
@@ -331,20 +330,17 @@ build_xml() {
 	CHAPTERS=""
 	APPENDICES=""
 	. $BOOKSDIR/$book/config
-	. $BOOKSDIR/$book/version
 
 	echod "This book contains:"
 	echod "MINIBOOKS = $MINIBOOKS"
 	echod "CHAPTERS = $CHAPTERS"
 	echod "APPENDICES = $APPENDICES"
 
-	VERSIONSTRING=lt-$MAJOR.$MINOR
-
 	echo "generating book $book (titled \"$BOOKTITLE\")"
 	[ -d $OUTPUTDIR ] || mkdir $OUTPUTDIR
 
 	BOOKTITLE2=$(echo $BOOKTITLE | sed -e 's/\ /\_/g' -e 's@/@-@g' )
-	filename=$BOOKTITLE2-$VERSIONSTRING-$DATECODE
+	filename=$BOOKTITLE2
 	xmlfile=$OUTPUTDIR/$filename.xml
 	pdffile=$OUTPUTDIR/$filename.pdf
 	headerfile=$OUTPUTDIR/section_header.xml
