@@ -30,6 +30,7 @@ HTMLCSS="$LIBDIR/html.css"
 # set this to empty or zero to disable this feature
 # this could be moved to a book config
 BUNDLE_APPENDICES=1
+APPENDICES_BUNDLE="license"
 
 ### initialisation ###
 
