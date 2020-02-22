@@ -246,10 +246,13 @@ build_part_body() {
 }
 
 fill_part() {
-	echo "<part>"       			>>$bodyfile
+	local partfile="$1"
+	local part_id="$2"
+
+	echo "<part id=\"$part_id\">"		>>$bodyfile
 	# Here we use the BOOKTITLE as a title for the PART
-	echo "<title>$BOOKTITLE</title>"        >>$bodyfile
-	cat $1              			>>$bodyfile
+	echo "<title>$BOOKTITLE</title>"	>>$bodyfile
+	cat "$partfile"        			>>$bodyfile
 	echo "</part>"      			>>$bodyfile
 	return 0
 }
@@ -297,7 +300,7 @@ build_body() {
             for minibook in $MINIBOOKS
             do  echod "Assembling the part for minibook $minibook"
 		build_part $minibook
-                fill_part $partfile
+                fill_part "$partfile" "$minibook"
             done
     fi
 
@@ -319,7 +322,7 @@ build_body() {
 			else	BOOKTITLE="Appendix"
 			fi
 			echod "Adding the custom part at the end."
-			fill_part $partfile
+			fill_part "$partfile" "${BOOKTITLE,,}"
 	    fi
     fi
     return 0
