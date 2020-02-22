@@ -149,7 +149,9 @@ while(<ABSTR>) {
 		$contacts = "<itemizedlist>\n";
 		foreach $author (@AUTHORS) {
 			$contacts .= "<listitem><para>$author->{firstname} $author->{lastname}: ";
-			$contacts .= join(", ",($author->{email},$author->{http}));
+			$contacts .= "$author->{email}";
+			$contacts .= ", ";
+			$contacts .= "<ulink url=\"$author->{http}\"/>";
 			$contacts .= "</para></listitem>\n";
 		}
 		$contacts .= "</itemizedlist>\n";
@@ -162,7 +164,7 @@ while(<ABSTR>) {
 			$contacts .= "<listitem><para>$editor->{firstname} $editor->{lastname}: ";
 			$contacts .= "$editor->{email}$editor->{emailcomment}";
 			$contacts .= ", ";
-			$contacts .= "$editor->{http}";
+			$contacts .= "<ulink url=\"$editor->{http}\"/>";
 			$contacts .= "</para></listitem>\n";
 		}
 		$contacts .= "</itemizedlist>\n";
