@@ -1,8 +1,8 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.0-alpha</revnumber>
-  <date>22 Feb 2020</date>
+  <revnumber>v3.0.1-alpha</revnumber>
+  <date>27 Feb 2020</date>
   <authorinitials>Aleksander Korzynski</authorinitials>
   <revremark>
 
@@ -26,11 +26,11 @@
     command;</listitem>
 
     <listitem>Modify the examples to refrain from using the
-    <emphasis>cat</emphasis> command, before its usage is explained to the
+    <emphasis>cat</emphasis> command before its usage is explained to the
     reader;</listitem>
 
     <listitem>Modify the examples to refrain from using a
-    <emphasis>semicolon</emphasis> &#8211; '<emphasis>;</emphasis>', before
+    <emphasis>semicolon</emphasis> &#8211; '<emphasis>;</emphasis>' before
     its usage is explained to the reader;</listitem>
 
     <listitem>Copy the description of the <emphasis>echo</emphasis> command
@@ -41,12 +41,12 @@
     given that it is not yet explained by that point;</listitem>
 
     <listitem>Remove the chapter on the file system tree from
-    <citetitle>Commence the Commands</citetitle>, given that it belongs to
-    another minibook;</listitem>
+    <citetitle>Commence the Commands</citetitle>, with the intention of
+    putting it into another minibook;</listitem>
 
     <listitem>Remove the section on the <emphasis>rename</emphasis> command
-    from <citetitle>Commence the Commands</citetitle>, given that it belongs
-    to another minibook;</listitem>
+    from <citetitle>Commence the Commands</citetitle>, with the intention
+    of putting it into another minibook;</listitem>
 
     <listitem>Modify the titles to use a consistent convention for
     capitalisation and special characters;</listitem>
