@@ -1,7 +1,7 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-alpha</revnumber>
+  <revnumber>v3.0.1-alpha2</revnumber>
   <date>27 Feb 2020</date>
   <authorinitials>Aleksander Korzynski</authorinitials>
   <revremark>
@@ -116,8 +116,8 @@
 
   This edition is available gratis at: <ulink
   url="https://userbie.com/commence-the-commands"/>. The source
-  code is available on request from the publisher: <ulink
-  url="https://userbie.com/contact-us"/>.
+  code is available at: <ulink
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha2"/>.
 
   </revremark>
 </revision>
