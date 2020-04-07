@@ -25,7 +25,7 @@ syslogd (8)          - Linux system logging utilities.
 syslogd-listfiles (8) - list system logfiles</screen>
 	</section>
 	<section><title>whatis</title>
-		<para>To see just the description of a manual page, use <command>whatis</command><indexterm><primary>whatis(1)</primary></indexterm> followed by a string.</para>
+		<para>To see just the description of a manual page, use <command>whatis</command><indexterm><primary>whatis(1)</primary></indexterm> followed by a string (i.e. a sequence of characters).</para>
 		<screen>paul@u810:~$ whatis route
 route (8)            - show / manipulate the IP routing table</screen>
 	</section>
@@ -60,7 +60,7 @@ whois: /usr/share/man/man1/whois.1.gz</screen>
 No manual entry for woman</screen>
 	</section>
 	<section><title>mandb</title>
-		<para>Should you be convinced that a man page exists, but you can't access it, then try running <command>mandb</command><indexterm><primary>mandb(1)</primary></indexterm> on Debian/Mint.</para>
+		<para>Should you be convinced that a man page exists, but you can't access it, then try running <command>mandb</command><indexterm><primary>mandb(1)</primary></indexterm> on Arch or Debian-derived distributions, such as Ubuntu or Mint.</para>
 		<screen>root@laika:~# mandb
 0 man subdirectories contained newer manual pages.
 0 manual pages were added.
