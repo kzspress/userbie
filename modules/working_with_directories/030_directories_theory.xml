@@ -83,7 +83,7 @@ paul@debian8$ <command>pwd</command>
 <?hard-pagebreak?>
 	<section><title>Path Completion</title>
 		<para>The <command>tab key</command><indexterm><primary>tab key(bash)</primary></indexterm> can help you in typing a path without errors. Typing <command>cd /et</command> followed by the <command>tab key</command> will expand the command line to <command>cd /etc/</command>. When typing <command>cd /Et</command> followed by the <command>tab key</command>, nothing will happen because you typed the wrong <command>path</command><indexterm><primary>path</primary></indexterm> (upper case E).</para>
-		<para>You will need fewer key strokes when using the <command>tab key</command>, and you will be sure your typed <command>path</command> is correct!</para>
+		<para>You will need fewer key strokes when using the <command>tab key</command>, and you will be sure your typed <command>path</command> is correct! When typing <command>path</command> followed by double use of the <command>tab key</command> will show options of completion.</para>
 	</section>
 	<section><title><emphasis>ls</emphasis></title>
 		<para>You can list the contents of a directory with <command>ls</command><indexterm><primary>ls</primary></indexterm>.</para>
@@ -165,7 +165,7 @@ paul@debian8:~/mydir$</screen>
 			<screen>paul@debian8:~$ <command>mkdir mydir2/mysubdir2/threedirsdeep</command>
 mkdir: cannot create directory ‘mydir2/mysubdir2/threedirsdeep’: No such fi\
 le or directory</screen>
-			<para>When given the option <command>-p</command><indexterm><primary>mkdir -p</primary></indexterm>, then <command>mkdir</command> will create <command>parent directories</command> as needed.</para>
+			<para>The command <command>mkdir -p</command><indexterm><primary>mkdir -p</primary></indexterm> allows users to create a directory and subdirectory with one command.</para>
 <screen>paul@debian8:~$ <command>mkdir -p mydir2/mysubdir2/threedirsdeep</command>
 paul@debian8:~$ <command>cd mydir2</command>
 paul@debian8:~/mydir2$ <command>ls -l</command>
