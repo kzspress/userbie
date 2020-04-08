@@ -54,7 +54,7 @@ whois: /usr/share/man/man1/whois.1.gz</screen>
 [paul@RHEL52 ~]$ man 5 passwd    # opens a page from section 5</screen>
 	</section>
 	<section><title>man man</title>
-		<para>If you want to know more about <command>man</command>, then Read The Fantastic Manual (RTFM).</para>
+		<para>If you want to know more about <command>man</command>, then Read The Fine Manual (RTFM).</para>
 		<para><emphasis>Unfortunately, manual pages do not have the answer to everything...</emphasis></para>
 		<screen>paul@laika:~$ man woman
 No manual entry for woman</screen>
