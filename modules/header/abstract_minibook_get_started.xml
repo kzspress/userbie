@@ -1,10 +1,11 @@
 <abstract>
 
-<para><citetitle>Commence the Commands</citetitle> will gently and humorously
-introduce you to the useful art of controlling a Linux computer using the
-keyboard, rather than the mouse. It comes in the form of a quick-start guide,
-which should take about 30 minutes to read. In addition, it is combined
-with practical exercises, which should take about 90 minutes to do.</para>
+<para><citetitle>Get Started on Linux in 32 Minutes</citetitle> will
+gently and humorously introduce you to the useful art of controlling a Linux
+computer using the keyboard, rather than the mouse. It comes in the form of a
+quick-start guide, which should take about 32 minutes to read.  In addition,
+it is combined with practical exercises, which should take about 90 minutes
+to do.</para>
 
 <para>This minibook is a part of a full-length book, entitled <citetitle>Linux
 Doesn't Have to Be Hard: A Beginner's Guide</citetitle>, comprehensively
@@ -37,9 +38,9 @@ your name will feature as a contributor to the guide.</para>
 
 <para> This book has been originally written by Paul Cobbaut. Its
 maintenance has since been taken over by Aleksander Korzynski and
-the Userbie team. The latest version of this guide is available
-at: <ulink url="http://userbie.com/commence-the-commands"
->userbie.com/commence-the-commands</ulink>.</para>
+the Userbie team. The latest version of this guide is available at:
+<ulink url="http://userbie.com/get-started-on-linux-in-32-minutes"
+>userbie.com/get-started-on-linux-in-32-minutes</ulink>.</para>
 
 <para>This edition has been created by Aleksander Korzynski. Feel
 free to contact him at ak@wants-no-spam.akorzy.com (remove

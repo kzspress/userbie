@@ -44,13 +44,15 @@ link, located at the end of every paragraph, to provide feedback to the
 maintainers. If your suggested changes are incorporated into the guide,
 your name will feature as a contributor to the guide.</para>
 
-<para> This book has been originally written by Paul Cobbaut. Its maintenance
-has since been taken over by Aleksander Korzynski and the Userbie team. Only a
-part of the book has been updated by the new maintainer so far. You can access
-the updated part at: <ulink url="https://userbie.com/commence-the-commands"
->userbie.com/commence-the-commands</ulink>. To receive notifications when
-subsequent parts of the book are released, please subscribe to the <ulink
-url="https://userbie.com/newsletter">Userbie Newsletter</ulink>.</para>
+<para> This book has been originally written by Paul Cobbaut. Its
+maintenance has since been taken over by Aleksander Korzynski and
+the Userbie team. Only a part of the book has been updated by the
+new maintainer so far. You can access the updated part at: <ulink
+url="https://userbie.com/get-started-on-linux-in-32-minutes"
+>userbie.com/get-started-on-linux-in-32-minutes</ulink>. To
+receive notifications when subsequent parts of the book are released,
+please subscribe to the <ulink url="https://userbie.com/newsletter">Userbie
+Newsletter</ulink>.</para>
 
 <para>This edition has been created by Aleksander Korzynski. Feel
 free to contact him at ak@wants-no-spam.akorzy.com (remove

@@ -19,8 +19,8 @@
     <listitem>Move aside all minibooks except for <citetitle>First Steps on
     the Command Line</citetitle>;</listitem>
 
-    <listitem>Change the title of the minibook to <citetitle>Commence the
-    Commands: A Quick-Start Guide to the Linux Shell</citetitle>;</listitem>
+    <listitem>Change the title of the minibook to <citetitle>Get Started on
+    Linux in 32 Minutes: Intro to the Shell</citetitle>;</listitem>
 
     <listitem>Reword the explanation of the <emphasis>cat</emphasis>
     command;</listitem>
@@ -41,12 +41,12 @@
     given that it is not yet explained by that point;</listitem>
 
     <listitem>Remove the chapter on the file system tree from
-    <citetitle>Commence the Commands</citetitle>, with the intention of
-    putting it into another minibook;</listitem>
+    <citetitle>Get Started on Linux in 32 Minutes</citetitle>,
+    with the intention of putting it into another minibook;</listitem>
 
     <listitem>Remove the section on the <emphasis>rename</emphasis> command
-    from <citetitle>Commence the Commands</citetitle>, with the intention
-    of putting it into another minibook;</listitem>
+    from <citetitle>Get Started on Linux in 32 Minutes</citetitle>,
+    with the intention of putting it into another minibook;</listitem>
 
     <listitem>Modify the titles to use a consistent convention for
     capitalisation and special characters;</listitem>
@@ -115,8 +115,8 @@
   </itemizedlist>
 
   This edition is available gratis at: <ulink
-  url="https://userbie.com/commence-the-commands"/>. The source
-  code is available at: <ulink
+  url="https://userbie.com/get-started-on-linux-in-32-minutes"/>.
+  The source code is available at: <ulink
   url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha2"/>.
 
   </revremark>
