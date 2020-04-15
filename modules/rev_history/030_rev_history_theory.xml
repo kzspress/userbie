@@ -1,7 +1,7 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-alpha2</revnumber>
+  <revnumber>v3.0.1-alpha3</revnumber>
   <date>27 Feb 2020</date>
   <authorinitials>Aleksander Korzynski</authorinitials>
   <revremark>
@@ -106,7 +106,16 @@
     url="https://www.akorzy.com"/></listitem>
 
   </itemizedlist>
-   
+
+  Reviewers of this edition:
+
+  <itemizedlist>
+    <listitem>Sarah Julia Kriesch:
+    sarah-julia.kriesch@wants-no-spam.gmx.de</listitem>
+    <listitem>Tomek Czerniak: czerniakto@wants-no-spam.gmail.com</listitem>
+    <listitem>Zenon Monge: zmonge@wants-no-spam.gmail.com</listitem>
+  </itemizedlist>
+
   Published by:
 
   <itemizedlist mark="bullet">
@@ -117,7 +126,7 @@
   This edition is available gratis at: <ulink
   url="https://userbie.com/45-minutes-to-get-started-on-the-command-line"/>.
   The source code is available at: <ulink
-  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha2"/>.
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha3"/>.
 
   </revremark>
 </revision>
