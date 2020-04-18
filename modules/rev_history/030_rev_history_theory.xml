@@ -19,8 +19,8 @@
     <listitem>Move aside all minibooks except for <citetitle>First Steps on
     the Command Line</citetitle>;</listitem>
 
-    <listitem>Change the title of the minibook to <citetitle>45 Minutes to
-    Get Started on the Command Line: A Linux Primer</citetitle>;</listitem>
+    <listitem>Change the title of the minibook to <citetitle>Get Started on
+    Linux in 45 Minutes: Intro to the Shell </citetitle>;</listitem>
 
     <listitem>Reword the explanation of the <emphasis>cat</emphasis>
     command;</listitem>
@@ -41,11 +41,11 @@
     given that it is not yet explained by that point;</listitem>
 
     <listitem>Remove the chapter on the file system tree from
-    <citetitle>45 Minutes to Get Started on the Command Line</citetitle>,
+    <citetitle>Get Started on Linux in 45 Minutes</citetitle>,
     with the intention of putting it into another minibook;</listitem>
 
     <listitem>Remove the section on the <emphasis>rename</emphasis> command
-    from <citetitle>45 Minutes to Get Started on the Command Line</citetitle>,
+    from <citetitle>Get Started on Linux in 45 Minutes</citetitle>,
     with the intention of putting it into another minibook;</listitem>
 
     <listitem>Modify the titles to use a consistent convention for
@@ -124,7 +124,7 @@
   </itemizedlist>
 
   This edition is available gratis at: <ulink
-  url="https://userbie.com/45-minutes-to-get-started-on-the-command-line"/>.
+  url="https://userbie.com/get-started-on-linux-in-45-minutes"/>.
   The source code is available at: <ulink
   url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha3"/>.
 
