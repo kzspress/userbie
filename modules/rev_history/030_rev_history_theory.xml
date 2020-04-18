@@ -1,7 +1,7 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-alpha3</revnumber>
+  <revnumber>v3.0.1-alpha4</revnumber>
   <date>27 Feb 2020</date>
   <authorinitials>Aleksander Korzynski</authorinitials>
   <revremark>
@@ -126,7 +126,7 @@
   This edition is available gratis at: <ulink
   url="https://userbie.com/get-started-on-linux-in-45-minutes"/>.
   The source code is available at: <ulink
-  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha3"/>.
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha4"/>.
 
   </revremark>
 </revision>
