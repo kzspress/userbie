@@ -1,7 +1,7 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-alpha2</revnumber>
+  <revnumber>v3.0.1-alpha5</revnumber>
   <date>27 Feb 2020</date>
   <authorinitials>Aleksander Korzynski</authorinitials>
   <revremark>
@@ -107,6 +107,15 @@
 
   </itemizedlist>
    
+  Reviewers of this edition:
+
+  <itemizedlist>
+    <listitem>Sarah Julia Kriesch:
+    sarah-julia.kriesch@wants-no-spam.gmx.de</listitem>
+    <listitem>Tomek Czerniak: czerniakto@wants-no-spam.gmail.com</listitem>
+    <listitem>Zenon Monge: zmonge@wants-no-spam.gmail.com</listitem>
+  </itemizedlist>
+
   Published by:
 
   <itemizedlist mark="bullet">
@@ -117,7 +126,7 @@
   This edition is available gratis at: <ulink
   url="https://userbie.com/get-started-on-linux-in-32-minutes"/>.
   The source code is available at: <ulink
-  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha2"/>.
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha5"/>.
 
   </revremark>
 </revision>
