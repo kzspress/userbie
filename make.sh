@@ -393,7 +393,7 @@ build_html() {
     cp $V $xmlfile $HTMLDIR || echor error copying $xmlfile
 
     # Locate the used images in the xml file
-    images=`grep imagedata $HTMLDIR/*.xml | cut -d/ -f2 | cut -d\" -f1`
+    images=`grep "<imagedata " $HTMLDIR/*.xml | sed 's@.* fileref="[^"]*/\([^"/]*\)".*@\1@'`
 
     # Copy all the used images
     for img in $images
