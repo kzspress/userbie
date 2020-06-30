@@ -84,7 +84,6 @@ set_JAVA() {
 	then    JAVA_ALTERNATIVE=$(readlink /etc/alternatives/java)
 		export JAVA_HOME=${JAVA_ALTERNATIVE%/bin/java}
 	else    echor Could not set JAVA_HOME, something unexpected happened in $0
-		exit 1
 	fi
 	return 0
 	}
@@ -94,7 +93,6 @@ check_ROOTDIR() {
 	if	[ -d $BOOKSDIR -a -d $MODULESDIR -a -d $BUILDDIR ]
 	then	echo "Current dir is book project root directory."
 	else	echor "Please run this script from the book root directory."
-		exit 1
 	fi
 	return 0
         }
@@ -121,7 +119,7 @@ add_mod() {
 
 echor() {	# echo error
 	echo $* >&2
-	return 0
+	exit 1
 	}
 
 echod() {	# echo debug
@@ -154,7 +152,7 @@ check_book() {
 			done
 			if [ $check = 1 ]
 				then echo "Selected book $book"
-				else echor "$book is not available"; exit -1
+				else echor "$book is not available"
 			fi
 		else
 			echo "No book specified, assuming default book"
@@ -209,7 +207,6 @@ build_part_body() {
 	    if [ -d "$MODULESDIR/$mod" ]
 	    then	MODULES=$(ls ${MODULESDIR}/${mod}/*)
  	    else	echor "Error: module $mod does not exist!" 
-			exit 1
 	    fi
             echo $MODULES
 
@@ -375,7 +372,7 @@ build_xml() {
 	}
 
 build_pdf() {
-  echor PDF generation disabled in this edition && exit 1
+  echor PDF generation disabled in this edition
 	set_xsl
 	set_JAVA
 	echo 
@@ -389,11 +386,11 @@ build_pdf() {
 
 build_html() {
     [ -d $HTMLDIR ] && rm -rf $V $HTMLDIR
-    mkdir $V $HTMLDIR || ( echor Error creating $HTMLDIR && exit 1 )
-    mkdir $V $HTMLIMGDIR || ( echor Error creating $HTMLIMGDIR && exit 1 )
+    mkdir $V $HTMLDIR || echor Error creating $HTMLDIR
+    mkdir $V $HTMLIMGDIR || echor Error creating $HTMLIMGDIR
 
     # We only need the one xml file
-    cp $V $xmlfile $HTMLDIR || ( echor error copying $xmlfile && exit 1 )
+    cp $V $xmlfile $HTMLDIR || echor error copying $xmlfile
 
     # Locate the used images in the xml file
     images=`grep imagedata $HTMLDIR/*.xml | cut -d/ -f2 | cut -d\" -f1`
@@ -402,7 +399,7 @@ build_html() {
     for img in $images
     do
          echo Copying $img to $HTMLIMGDIR ...
-         cp $V "$IMAGESDIR/$img" $HTMLIMGDIR/ || echor Error copying $img 
+         cp $V "$IMAGESDIR/$img" $HTMLIMGDIR/ || echor Error copying $img
     done
 
     # Copy css file to html directory
@@ -412,7 +409,7 @@ build_html() {
     # Run xsltproc in $HTMLDIR to generate the html
     echo "Converting xml to html ..."
     ( cd $HTMLDIR ; xsltproc -o "$filename.html" "../../$HTMLXSL" "$filename.xml" ) \
-         || ( echor  Error generating the html file "$filename.html" ; exit 1 )
+         || echor  Error generating the html file "$filename.html"
 
     # don't need the xml anymore in the $HTMLDIR
     rm -f "$filename.xml" 
@@ -479,7 +476,7 @@ case "$command" in
 	clean
 	;;
   pdf)
-	[ -x "$(which fop)" ] || (echor "fop not installed." && exit 1)
+	[ -x "$(which fop)" ] || echor "fop not installed."
 	clean
 	check_book
 	echo "Building '$book' book."
@@ -489,7 +486,7 @@ case "$command" in
 	echo "Done generating pdf $OUTPUTDIR/book.pdf -> $pdffile" 
 	;;
   html)
-	[ -x "$(which xsltproc)" ] || (echor "xsltproc not installed." && exit 1)
+	[ -x "$(which xsltproc)" ] || echor "xsltproc not installed."
 	clean 
 	check_book
 	echo "Building '$book' book."
