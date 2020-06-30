@@ -1,0 +1,15 @@
+<para>You'll be suprised how quick and easy it is to install Linux using
+Vagrant<indexterm><primary>Vagrant</primary></indexterm>. It'll automatically
+download, install and configure Linux in a virtual machine (VM), leaving
+your current environment intact.</para>
+
+<para>If you don't have access to a Linux command line, then this
+chapter contains step-by-step instructions on how to install Linux in a
+VM. Installation in a virtual machine is the safest, because even if something
+breaks on the VM, nothing on the physical computer stops working.</para>
+
+<para>If you already have access to a Linux command line, you can skip this
+chapter and go straight to <xref linkend="man_pages"/>.</para>
+
+<para>And one more thing &#8211; please don't use Linux for nefarious purposes
+:) Let's get started!</para>

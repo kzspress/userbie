@@ -1,0 +1,135 @@
+<?hard-pagebreak?>
+<section><title>Step 1: Download &amp; Install VirtualBox</title>
+
+<para><emphasis>VirtualBox</emphasis><indexterm><primary>VirtualBox</primary></indexterm>
+is a free and open-source virtualization solution. Download the version
+for your <emphasis>current</emphasis> operating system &#8211; for example,
+if you're on Windows, get the version for Windows, not Linux. The project's
+main site is <ulink url="https://virtualbox.org"/>.</para>
+
+<ulink url="https://virtualbox.org"><mediaobject><imageobject><imagedata fileref="images/VirtualBox-Download.png" format="PNG" align="center"></imagedata></imageobject></mediaobject></ulink>
+
+</section>
+
+<section><title>Step 2: Download &amp; Install Vagrant</title>
+
+<para><emphasis>Vagrant</emphasis><indexterm><primary>Vagrant</primary></indexterm>
+is a free and open-source project for managing virtual machines. As before,
+download the version of Vagrant for your <emphasis>current</emphasis> operating
+system. The site to go to is <ulink url="https://vagrantup.com"/>.</para>
+
+<ulink url="https://vagrantup.com"><mediaobject><imageobject><imagedata fileref="images/Vagrant-Download.png" format="PNG" align="center"></imagedata></imageobject></mediaobject></ulink>
+
+</section>
+
+<section><title>Step 3: Download &amp; Install Linux in a VM</title>
+
+<para>This is going to be super-easy with Vagrant.</para>
+
+<para>Linux comes in many different flavors called
+<emphasis>distributions</emphasis><indexterm><primary>distribution</primary></indexterm>.
+A Linux distribution is a complete set of programs that together comprise
+a full operating system.</para>
+
+<para>You're now going to install a distribution called
+<emphasis>Debian</emphasis>. To be more precise, you're going to install
+a special version of Debian that integrates with VirtualBox very well. The
+special version contains extensions that allow you to easily copy files to
+and from a VirtualBox virtual machine.</para>
+
+<para>At the time of this writing (June 2020), the latest version of Debian
+is called <emphasis>buster</emphasis> and that's the version you're going
+to install.</para>
+
+<para>Vagrant knows how to configure a given virtual machine from a
+configuration file called the <filename>Vagrantfile</filename>. Fortunately,
+the Vagrantfile can be generated automatically, which is what we're going to
+do :) You can keep the Vagrantfile anywhere you want on your hard drive.</para>
+
+<para>To use Vagrant you need to enter the command line of your current
+operating system. On Windows, open the File Explorer, navigate to the
+directory where you want to keep the Vagrantfile (for example, the Documents
+directory), press Shift&nbsp;+&nbsp;right-click on the directory and click
+on "Open command window here" or "Open PowerShell window here". On MacOS,
+open Finder, navigate to the directory where you want to keep the Vagrantfile
+(for example, the Documents directory), right-click on the directory, go to
+Services and click on "New Terminal at Folder".</para>
+
+<para>Once in the command line, type in the following:</para>
+
+<screen>vagrant init debian/contrib-buster64</screen>
+
+<para>When the command finishes successfully, it should print a message that
+it created the Vagrantfile in your current directory.</para>
+
+<note><title>Want to try another distribution?</title><para>This book
+is written in a way that allows you to use any major Linux distribution
+to practice the commands from the book. We still recommend the special
+version of Debian described above, however, because it contains the
+special VirtualBox extensions. Nonetheless, two other popular distributions
+that have been tested with this book are: <emphasis>Fedora</emphasis> and
+<emphasis>Ubuntu</emphasis>. Both are good and you can give them a try. At the
+time of this writing, the latest version of Fedora is <emphasis>32</emphasis>
+and the latest version of Ubuntu is <emphasis>groovy</emphasis>. To install
+one of them, use one of the following commands instead.</para>
+
+<screen>vagrant init fedora/32-cloud-base</screen>
+<screen>vagrant init ubuntu/groovy64</screen>
+</note>
+
+</section>
+
+<section><title>Step 4: Start the VM with Linux</title>
+
+<para>When the installation is finished, start the virtual machine, so that
+it runs in the background:</para>
+
+<screen>vagrant up</screen>
+
+<para>The above command will take a while, because that's the one that
+actually downloads the distribution.</para>
+
+</section>
+
+<section><title>Step 5: Log in to Linux</title>
+
+<para>To log in to Linux, type: </para>
+
+<screen>vagrant ssh</screen>
+
+<para>That's it! You now have a working Linux command line.</para>
+
+</section>
+
+<section><title>Step 6: Starting the VM after Host Reboot</title>
+
+<para>If you reboot your host computer (that is your physical machine),
+you need to start the VM again before you can log back in to it. Open the
+command line and type the following:</para>
+
+<screen>vagrant up</screen>
+
+<para>Then log in as normal:</para>
+
+<screen>vagrant ssh</screen>
+
+</section>
+
+<section><title>Bonus: Copying Files To and From the VM</title>
+
+<para>If you've installed the recommended version of Debian, copying files
+to and from the virtual machine is going to be super-easy as well. Files in
+the directory on the host machine where the <filename>Vagrantfile</filename>
+is located will be automatically visible in the <filename>/vagrant</filename>
+directory in the virtual machine.</para>
+
+<para>So if you want to share a file from the host to the VM, just put
+it in the same directory as the <filename>Vagrantfile</filename>. And
+if you want to share a file from the VM to the host, just put it in the
+<filename>/vagrant</filename> directory.</para>
+
+<para>Wondering how to copy files inside the virtual machine? <link
+linkend="man_pages">Read the remaining chapters</link>, which will tell you
+all you need to know about&nbsp;it&nbsp;:)</para>
+
+</section>
