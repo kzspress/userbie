@@ -2,11 +2,10 @@
 <section><title>Practice: Working with Files</title>
 	<para>1. List the files in the /bin directory</para>
 	<para>2. Display the type of file of /bin/cat, /etc/passwd and /usr/bin/passwd.</para>
-	<para>3a. Download the first page of the kernel.org website using the following command.</para>
-	<screen>wget http://www.kernel.org/index.html</screen>
-	<para>3b. List the contents of the current directory and notice the index.html file. Then display the type of the index.html file.</para>
-	<para>3c. Rename the index.html file to index.pdf (use mv).</para>
-	<para>3d. Display the type of the file you renamed. Is it going to be HTML or PDF?</para>
+	<para>3a. Copy the following file to your home directory: /usr/share/man/man1/cp.1.gz</para>
+	<para>3b. List the contents of your home directory and notice the cp.1.gz file. Then display the type of the cp.1.gz file.</para>
+	<para>3c. Rename the cp.1.gz file to cp.1.html (use mv).</para>
+	<para>3d. Display the type of the file you renamed. Is it going to be GZ or HTML?</para>
 	<para>4. Create a directory &#126;/touched and enter it.</para>
 	<para>5. Create the files today.txt and yesterday.txt in touched.</para>
 	<para>6. Change the date on yesterday.txt to match yesterday's date.</para>

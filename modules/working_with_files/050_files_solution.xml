@@ -4,15 +4,15 @@
 	<screen>ls /bin</screen>
 	<para>2. Display the type of file of /bin/cat, /etc/passwd and /usr/bin/passwd.</para>
 	<screen>file /bin/cat /etc/passwd /usr/bin/passwd</screen>
-        <para>3a. Download the first page of the kernel.org website using the following command.</para>
-        <screen>wget http://www.kernel.org/index.html</screen>
-        <para>3b. List the contents of the current directory and notice the index.html file. Then display the type of the index.html file.</para>
-	<screen>ls
-file index.html</screen>
-	<para>3c. Rename the index.html file to index.pdf (use mv).</para>
-	<screen>mv index.html index.pdf</screen>
-	<para>3d. Display the type of the file you renamed. Is it going to be HTML or PDF?</para>
-	<screen>file index.pdf</screen>
+  <para>3a. Copy the following file to your home directory: /usr/share/man/man1/cp.1.gz</para>
+  <screen>cp /usr/share/man/man1/cp.1.gz ~</screen>
+  <para>3b. List the contents of your home directory and notice the cp.1.gz file. Then display the type of the cp.1.gz file.</para>
+  <screen>ls
+file cp.1.gz</screen>
+	<para>3c. Rename the cp.1.gz file to cp.1.html (use mv).</para>
+	<screen>mv cp.1.gz cp.1.html</screen>
+	<para>3d. Display the type of the file you renamed. Is it going to be GZ or HTML?</para>
+	<screen>file cp.1.html</screen>
 	<para>4. Create a directory &#126;/touched and enter it.</para>
 	<screen>mkdir &#126;/touched
 cd &#126;/touched</screen>
