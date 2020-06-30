@@ -1,9 +1,9 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-alpha2</revnumber>
-  <date>27 Feb 2020</date>
-  <authorinitials>Aleksander Korzynski</authorinitials>
+  <revnumber>v3.0.1-beta3</revnumber>
+  <date>30 Jun 2020</date>
+  <authorinitials>Aleksander Korzyński</authorinitials>
   <revremark>
 
   Summary of changes:
@@ -12,15 +12,17 @@
     <listitem>Move aside all books except for <citetitle>Linux
     Fundamentals</citetitle>;</listitem>
 
-    <listitem>Change the title of the book to <citetitle>Linux Doesn't Have
-    to Be Hard: A Beginner's Guide</citetitle> and the title of the series
-    to <citetitle>Userbie</citetitle>;</listitem>
-
     <listitem>Move aside all minibooks except for <citetitle>First Steps on
     the Command Line</citetitle>;</listitem>
 
-    <listitem>Change the title of the minibook to <citetitle>Commence the
-    Commands: A Quick-Start Guide to the Linux Shell</citetitle>;</listitem>
+    <listitem>Change the title of the minibook to <citetitle>Get Started
+    on Linux by End of Tonight: Without Breaking Your Box &#8211; A Userbie
+    Guide</citetitle>;</listitem>
+
+    <listitem>Change the title of the series to
+    <citetitle>Userbie</citetitle>;</listitem>
+
+    <listitem>Create a chapter on installing Linux using Vagrant;</listitem>
 
     <listitem>Reword the explanation of the <emphasis>cat</emphasis>
     command;</listitem>
@@ -29,24 +31,29 @@
     <emphasis>cat</emphasis> command before its usage is explained to the
     reader;</listitem>
 
-    <listitem>Modify the examples to refrain from using a
+    <listitem>Modify the exercises to refrain from using
+    <emphasis>wget</emphasis>, so that readers can use a distribution that
+    doesn't include the program;</listitem>
+
+    <listitem>Modify the solutions to refrain from using a
     <emphasis>semicolon</emphasis> &#8211; '<emphasis>;</emphasis>' before
     its usage is explained to the reader;</listitem>
 
     <listitem>Copy the description of the <emphasis>echo</emphasis> command
     from the chapter on shell arguments;</listitem>
 
+    <listitem>Remove the section on <emphasis>mandb</emphasis>, because it's
+    a system administration command;</listitem>
+
     <listitem>Remove the exercise that relies on understanding the meaning
     of an <emphasis>asterisk</emphasis> &#8211; '<emphasis>*</emphasis>',
-    given that it is not yet explained by that point;</listitem>
+    given that it's not yet explained by that point;</listitem>
 
-    <listitem>Remove the chapter on the file system tree from
-    <citetitle>Commence the Commands</citetitle>, with the intention of
-    putting it into another minibook;</listitem>
-
-    <listitem>Remove the section on the <emphasis>rename</emphasis> command
-    from <citetitle>Commence the Commands</citetitle>, with the intention
+    <listitem>Remove the chapter on the file system tree, with the intention
     of putting it into another minibook;</listitem>
+
+    <listitem>Remove the section on the <emphasis>rename</emphasis> command,
+    with the intention of putting it into another minibook;</listitem>
 
     <listitem>Modify the titles to use a consistent convention for
     capitalisation and special characters;</listitem>
@@ -101,23 +108,52 @@
 
   <itemizedlist mark="bullet">
 
-    <listitem>Aleksander Korzynski: ak@wants-no-spam.akorzy.com
+    <listitem>Aleksander Korzyński: ak&nbsp;AT&nbsp;wants-no-spam.akorzy.com
     (remove <emphasis>wants-no-spam.</emphasis>), <ulink
     url="https://www.akorzy.com"/></listitem>
 
   </itemizedlist>
-   
+  
+  Thanks for reviewing the book! The reviewers were:
+  
+  <itemizedlist mark="bullet">
+  
+    <listitem>Sajid Badiuzzaman:
+    sajidzaman&nbsp;AT&nbsp;wants-no-spam.live.com</listitem>
+
+    <listitem>Tomek Czerniak:
+    czerniakto&nbsp;AT&nbsp;wants-no-spam.gmail.com</listitem>
+
+    <listitem>Sarah Julia Kriesch:
+    sarah-julia.kriesch&nbsp;AT&nbsp;wants-no-spam.gmx.de</listitem>
+
+    <listitem>Zenon Monge:
+    zmonge&nbsp;AT&nbsp;wants-no-spam.gmail.com</listitem>
+
+  </itemizedlist>
+
+  Additional contributors to this edition:
+
+  <itemizedlist mark="bullet">
+
+    <listitem>Maksymilian Łowczyński:
+    maksymilian.job&nbsp;AT&nbsp;wants-no-spam.gmail.com</listitem>
+
+  </itemizedlist>
+ 
   Published by:
 
   <itemizedlist mark="bullet">
+    
     <listitem>KZS Press, trading name of KZS Commerce Ltd, 7 Kings Avenue,
-    Manchester, M8 5AS, UK</listitem>
+    Manchester, M8 5AS, United Kingdom, Company No. 12242538</listitem>
+
   </itemizedlist>
 
   This edition is available gratis at: <ulink
-  url="https://userbie.com/commence-the-commands"/>. The source
-  code is available at: <ulink
-  url="https://github.com/kzspress/userbie/tree/v3.0.1-alpha2"/>.
+  url="https://userbie.com"/>.
+  The source code is available at: <ulink
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-beta3"/>.
 
   </revremark>
 </revision>

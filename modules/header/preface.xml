@@ -1,33 +1,79 @@
-<preface><title>Preface</title>
+<preface id="preface"><title>Preface</title>
 
-<para>This guide belongs to the <citetitle>Userbie</citetitle> series of
-books. The series is unlike any other. It is available gratis and is intended
-to be developed collaboratively and indefinitely.</para>
+<para>George is a friend of mine and a business owner and a few months ago he
+asked me for advice. He employs a junior developer called Martin who complained
+he was missing a senior developer on the team. Martin said that he didn't
+know if he was coding properly or not. He wished there was someone to provide
+feedback. George asked me if I could help. I said I could give a try for free
+and if Martin liked it, we could talk about some sort of paid mentoring.</para>
 
-<para>The Old Norse suffix <emphasis>-bie</emphasis> means a village or
-settlement. Userbie means <emphasis>a village of users</emphasis>. The word
-Userbie also rhymes with the word newbie.</para>
+<para>I read Martin’s code and it was good, but there was opportunity of
+improvement. I spoke with Martin, but I didn't tell him all my ideas right
+away. Instead, asked him questions that helped him come up with his own
+ways to improve the code. A few days later George told me that Martin was
+ecstatic! George hired me to mentor Martin and I realised I could do more
+of this. I needed to write some course materials as well.</para>
 
-<para>The updating, editing and publishing of the books will be crowdfunded. If
-you like this book and would like to see more, please join the crowdfunding
-campaign. To receive information about the campaign, subscribe to the <ulink
-url="https://userbie.com/newsletter">Userbie Newsletter</ulink>.</para>
+<para>I’d had the idea for this book for months before that. Linux
+documentation is scattered around the web, often out of date, incorrect or
+incomplete. On the one hand, there’re some quality books, but they cost
+money and readers cannot contribute to them. On the other hand, there’re
+wikis, but they’re unreliable and tend to be a chaotic. I wanted to try
+another model.</para>
 
-<para>The book's collaborative development process has been inspired by the
-Linux community. The community relies on Linus Torvalds as the maintainer
-of the Linux project. Anyone can offer feedback or a contribution to Linux,
-but Linus Torvalds and his trusted team decide if the proposed change gets
-incorporated into the project. This ensures that you can trust the code.</para>
+<para>Here is how it works: the online version of this book has a
+<emphasis>[feedback]</emphasis> link located at the end of every paragraph,
+a simple way to provide feedback to the editors. If you provide feedback and
+your suggested changes are incorporated into the book, your name will feature
+as a contributor to the book. In this model we combine the collaborative
+creativity of a wiki with the quality of a curated book!</para>
 
-<para>Anyone can also offer feedback or a contribution to this book, but the
-Userbie maintenance team decides if the proposed change gets incorporated
-into the book. This ensures that you can trust the content.</para>
+<para>To demonstrate the power of collaborative writing, I haven’t written
+this book from scratch. Paul Cobbaut has written a great series of books
+entitled <citetitle>Linux Training</citetitle>. Unfortunately, the books are
+now out of date, as they last received modest updates in 2015. The <ulink
+url="https://userbie.com">Userbie</ulink> series is an updated, restructured
+and partially rewritten version of the original series, created by myself
+and the Userbie team.</para>
 
-<para>I hope that you will find this book helpful
-and will join us in its further development on <ulink
-url="https://userbie.com">userbie.com</ulink>. Enjoy and have fun with
-Linux!</para>
+<para>The book is completely Open Access &#8211; you don’t have
+to pay to read it online. So how do we make money? You can <ulink
+url="https://www.codementor.io/@akorzy">purchase live help over a video
+link</ulink> or <ulink url="https://amzn.to/3gU0e8t">make a purchase from
+Amazon using our affiliate link</ulink>, so that we earn a commission. Find
+out more in the boxes below.</para>
 
-<para> -- Aleksander Korzynski</para>
+<important><title>Stuck? Get Live Help</title>
+
+<para>If you're stuck anywhere in the book, you can get live <ulink
+url="https://www.codementor.io/@akorzy">help over a video link</ulink>,
+using the CodeMentor platform. You can also get live long-term mentoring. You
+won't get charged for the first 15 minutes.</para>
+
+</important>
+
+<important><title>Don't Want To Troubleshoot?</title>
+
+<para>Don’t want to be bothered with troubleshooting Linux installation
+issues? Purchase a <ulink url="https://amzn.to/3gU0e8t">pre-installed Linux
+laptop</ulink>. If you click on that link and make any purchase on Amazon
+afterwards, we’ll receive a commission, which will help with the development
+and maintenance of the series.</para>
+
+</important>
+
+<para>In case you’re curious about the origin of the name Userbie, the Old
+Norse suffix <emphasis>-bie</emphasis> means a village or settlement. Userbie
+then means <emphasis>a village of users</emphasis>. The word Userbie also
+rhymes with the word newbie.</para>
+
+<para>I’ve put a lot of heart into preparing this book and I hope
+you’re going to get a lot of value out of it. Please let me know about
+your experiences with it. Has it helped you land a lucrative job? Have you
+felt proud for what you’ve achieved with Linux? I’m looking forward to
+hearing from you.</para>
+
+<para>&#8211; Aleksander Korzyński:
+ak&nbsp;AT&nbsp;wants-no-spam.akorzy.com</para>
 
 </preface>
