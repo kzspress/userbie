@@ -1,21 +1,21 @@
-body {
+.docbook-output {
         font-family: sans-serif;
 }
 
-.screen {
+.docbook-output .screen {
         font-family: monospace;
         font-size: 1em;
         display: block;
         padding: 10px;
         border: 2px solid #bbb;
         background-color: #eee;
-        color: #000;   
+        color: #000;
         overflow: auto;
         border-radius: 2.5px;
         -moz-border-radius: 2.5px;
         margin: 0.5em 2em;
 }
 
-.feedback-link-container {
+.docbook-output .feedback-link-container {
         display: none;
 }
