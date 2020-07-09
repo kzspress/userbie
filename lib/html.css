@@ -1,8 +1,8 @@
-body {
+.docbook-gen body {
         font-family: sans-serif;
 }
 
-.screen {
+.docbook-gen .screen {
         font-family: monospace;
         font-size: 1em;
         display: block;
@@ -16,6 +16,6 @@ body {
         margin: 0.5em 2em;
 }
 
-.feedback-link-container {
+.docbook-gen .feedback-link-container {
         display: none;
 }

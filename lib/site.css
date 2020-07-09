@@ -1,2 +1,164 @@
-body {
+/* The following stylesheet is:
+   Copyright (C) 2020 KZS Commerce Ltd
+   All rights reserved. Unauthorized copying prohibited. */
+
+.docbook-gen body {
+  font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Georgia,Geneva,Verdana,sans-serif;
+  max-width: 720px;
+  margin: auto;
+}
+
+.docbook-gen p {
+  text-align: justify;
+}
+
+.docbook-gen hr {
+    height: 1px;
+    border: 0;
+    background-image: linear-gradient(to right, #ddd, #000, #ddd);
+}
+
+.docbook-gen .screen {
+  border: 0.5px solid #a4a4a4;
+}
+
+.docbook-gen .feedback-link-superscript {
+  font-size: 0.85em;
+}
+
+.docbook-gen a:link {
+  color: black;
+  text-decoration: none;
+  border-bottom: 0.5px dotted black;
+}
+
+.docbook-gen a:visited {
+  color: #707070;
+  text-decoration: none;
+  border-bottom: 0.5px dotted #707070;
+}
+
+.docbook-gen a:hover {
+  color: #F59C2A;
+  text-decoration: none;
+  border-bottom: 1px solid #F59C2A;
+}
+
+.docbook-gen a:active {
+  color: red;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+}
+
+.docbook-gen .feedback-link-container a:link {
+  color: #707070;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.docbook-gen .feedback-link-container a:visited {
+  color: #707070;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.docbook-gen .feedback-link-container a:hover {
+  color: #F59C2A;
+  text-decoration: none;
+  border-bottom: 1px solid #F59C2A;
+}
+
+.docbook-gen .feedback-link-container a:active {
+  color: red;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+}
+
+.docbook-gen .revhistory table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.docbook-gen .revhistory th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #707070;
+  color: white;
+}
+
+.docbook-gen .revhistory td,.docbook-gen  .revhistory th {
+  padding: 8px;
+  border: 1px solid #707070;
+}
+
+.docbook-gen .revhistory tr:nth-child(even) {
+  background-color: #dcdcdc
+}
+
+.docbook-gen .copyright {
+  font-size:0.7em;
+  border-top: 1px solid #0005;
+  border-radius:10px;
+  padding-top:0.8em;
+  padding-right:0.8em;
+  padding-left:0.8em;
+}
+
+.docbook-gen .legalnotice {
+  font-size:0.7em;
+  border-bottom: 1px solid #0005;
+  border-radius:10px;
+  padding-bottom:0.8em;
+  padding-right:0.8em;
+  padding-left:0.8em;
+}
+
+.docbook-gen .filename {
+  font-family:inherit;
+  font-weight:bold;
+}
+
+.docbook-gen .note {
+  font-size:0.9em;
+  border-top: 1px solid;
+  padding-top: 0.1em;
+  border-bottom: 1px solid;
+  padding-bottom: 1em;
+  margin: 1.9em;
+}
+
+.docbook-gen .important {
+  background-color:#ecf2f8;
+  border:1px solid;
+  border-radius: 10px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-right:1em;
+  padding-left:1em;
+  margin: 1em;
+}
+
+.docbook-gen .important h3.title {
+  text-align:center;
+}
+
+.docbook-gen img {
+  border-top:1px solid #464646b3;
+  border-bottom:1px solid #464646b3;
+  border-left:1px solid #46464600;
+  border-right:1px solid #46464600;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  padding-bottom:1em;
+}
+
+.docbook-gen img:hover, img:visited {
+  border: 1px solid #F59C2A;
+  border-radius: 20px;
+}
+
+.docbook-gen img:active {
+  border: 1px solid red;
+  border-radius: 20px;
 }
