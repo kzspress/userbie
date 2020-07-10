@@ -1,8 +1,8 @@
 <revhistory>
 
 <revision>
-  <revnumber>v3.0.1-beta3</revnumber>
-  <date>30 Jun 2020</date>
+  <revnumber>v3.0.1-beta4</revnumber>
+  <date>10 Jul 2020</date>
   <authorinitials>Aleksander Korzyński</authorinitials>
   <revremark>
 
@@ -153,7 +153,7 @@
   This edition is available gratis at: <ulink
   url="https://userbie.com"/>.
   The source code is available at: <ulink
-  url="https://github.com/kzspress/userbie/tree/v3.0.1-beta3"/>.
+  url="https://github.com/kzspress/userbie/tree/v3.0.1-beta4"/>.
 
   </revremark>
 </revision>
