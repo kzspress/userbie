@@ -47,6 +47,10 @@
     </script>
   </xsl:template>
 
+  <xsl:template name="body.attributes">
+    <xsl:attribute name="class">docbook-output</xsl:attribute>
+  </xsl:template>
+
   <xsl:template name="feedback-link">
     <span class="feedback-link-container">
       <xsl:text>&#160;&#160;</xsl:text>
