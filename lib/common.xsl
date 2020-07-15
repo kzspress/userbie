@@ -160,6 +160,10 @@
     </xsl:call-template>
   </xsl:template>
 
+  <xsl:template match="filename">
+    <xsl:call-template name="inline.boldseq"/>
+  </xsl:template>
+
   <xsl:template match="pubdate" mode="titlepage.mode">
     <xsl:call-template name="paragraph">
       <xsl:with-param name="class" select="local-name(.)"/>
