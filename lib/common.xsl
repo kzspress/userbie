@@ -34,7 +34,7 @@
 
         var styleElem = document.createElement('style');
         styleElem.innerHTML = `
-          .feedback-link-container {
+          .docbook-output .feedback-link-container {
             display: inline;
           }
         `;
