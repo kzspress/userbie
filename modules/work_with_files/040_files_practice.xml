@@ -1,5 +1,5 @@
 <?hard-pagebreak?>
-<section><title>Practice: Working with Files</title>
+<section><title>Practice: Work with Files</title>
 	<para>1. List the files in the /bin directory</para>
 	<para>2. Display the type of file of /bin/cat, /etc/passwd and /usr/bin/passwd.</para>
 	<para>3a. Copy the following file to your home directory: /usr/share/man/man1/cp.1.gz</para>
