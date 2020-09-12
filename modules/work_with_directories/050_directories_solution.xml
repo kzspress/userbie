@@ -1,5 +1,5 @@
 <?hard-pagebreak?>
-<section><title>Solution: Moving around and Working with Directories</title>
+<section><title>Solution: Move around and Work with Directories</title>
 	<para>1. Display your current directory.</para>
 	<screen>pwd</screen>	
 	<para>2. Change to the /etc directory.</para>
